@@ -1,0 +1,1 @@
+python D:\PromptingFairness\prompting-fairness\src\prompt_tuning_debias\cli.py train-model --model-name bert-base-uncased --prompt-length 10 --experiment-name compare-run --num-epochs 10

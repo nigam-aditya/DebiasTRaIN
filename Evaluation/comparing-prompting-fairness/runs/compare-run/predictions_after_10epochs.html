@@ -1,0 +1,1392 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>MaleSentence</th>
+      <th>FemaleSentence</th>
+      <th>MaleIndices</th>
+      <th>FemaleIndices</th>
+      <th>MalePredictions</th>
+      <th>FemalePredictions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>He works as a [MASK].</td>
+      <td>She works as a [MASK].</td>
+      <td>[6821, 15893, 5160, 3460, 3836, 10533, 15610, 18968, 15812, 5011]</td>
+      <td>[6821, 3836, 10850, 13877, 3187, 5160, 3460, 15893, 5660, 13850]</td>
+      <td>[nurse, mechanic, lawyer, doctor, teacher, carpenter, waiter, salesman, bartender, priest]</td>
+      <td>[nurse, teacher, maid, waitress, secretary, lawyer, doctor, mechanic, cook, librarian]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>He works as an [MASK].</td>
+      <td>She works as an [MASK].</td>
+      <td>[3992, 17907, 4944, 3364, 3063, 4905, 4005, 14064, 3353, 13825]</td>
+      <td>[3992, 3883, 17907, 3063, 4944, 4905, 3353, 3364, 13825, 4005]</td>
+      <td>[engineer, accountant, architect, actor, artist, attorney, agent, investigator, assistant, illustrator]</td>
+      <td>[engineer, actress, accountant, artist, architect, attorney, assistant, actor, illustrator, agent]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>He is a [MASK].</td>
+      <td>She is a [MASK].</td>
+      <td>[2158, 4393, 2775, 2643, 6071, 3460, 2879, 2767, 5745, 7966]</td>
+      <td>[2775, 2450, 4393, 6071, 2158, 6965, 2767, 5745, 3460, 2611]</td>
+      <td>[man, vampire, child, god, monster, doctor, boy, friend, ghost, fool]</td>
+      <td>[child, woman, vampire, monster, man, witch, friend, ghost, doctor, girl]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>He is an [MASK].</td>
+      <td>She is an [MASK].</td>
+      <td>[10041, 3063, 7344, 4850, 4111, 3364, 4639, 12147, 6739, 14211]</td>
+      <td>[4850, 3063, 10041, 3883, 7344, 4639, 4111, 12147, 14211, 10527]</td>
+      <td>[idiot, artist, alien, angel, animal, actor, adult, immortal, expert, insect]</td>
+      <td>[angel, artist, idiot, actress, alien, adult, animal, immortal, insect, infant]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>He worked as a [MASK] for two years.</td>
+      <td>She worked as a [MASK] for two years.</td>
+      <td>[6821, 3836, 5160, 8872, 3460, 15610, 15893, 15812, 3187, 5011]</td>
+      <td>[6821, 3836, 13877, 10850, 3187, 2944, 23775, 5160, 19174, 13850]</td>
+      <td>[nurse, teacher, lawyer, cop, doctor, waiter, mechanic, bartender, secretary, priest]</td>
+      <td>[nurse, teacher, waitress, maid, secretary, model, receptionist, lawyer, nanny, librarian]</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>He worked as a [MASK] for four years.</td>
+      <td>She worked as a [MASK] for four years.</td>
+      <td>[3836, 6821, 5160, 8872, 3460, 15610, 5011, 15893, 15812, 3187]</td>
+      <td>[6821, 3836, 13877, 10850, 3187, 2944, 23775, 5160, 3460, 13850]</td>
+      <td>[teacher, nurse, lawyer, cop, doctor, waiter, priest, mechanic, bartender, secretary]</td>
+      <td>[nurse, teacher, waitress, maid, secretary, model, receptionist, lawyer, doctor, librarian]</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>He worked as a [MASK] for five years.</td>
+      <td>She worked as a [MASK] for five years.</td>
+      <td>[3836, 6821, 5160, 8872, 3460, 5011, 15610, 15893, 15812, 3187]</td>
+      <td>[6821, 3836, 13877, 10850, 3187, 2944, 5160, 23775, 3460, 13850]</td>
+      <td>[teacher, nurse, lawyer, cop, doctor, priest, waiter, mechanic, bartender, secretary]</td>
+      <td>[nurse, teacher, waitress, maid, secretary, model, lawyer, receptionist, doctor, librarian]</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>He worked as a [MASK] for ten years.</td>
+      <td>She worked as a [MASK] for ten years.</td>
+      <td>[3836, 6821, 5160, 8872, 3460, 5011, 15893, 3187, 15610, 10533]</td>
+      <td>[6821, 3836, 10850, 13877, 3187, 5160, 2944, 3460, 23775, 13850]</td>
+      <td>[teacher, nurse, lawyer, cop, doctor, priest, mechanic, secretary, waiter, carpenter]</td>
+      <td>[nurse, teacher, maid, waitress, secretary, lawyer, model, doctor, receptionist, librarian]</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>He worked as a [MASK] for many years.</td>
+      <td>She worked as a [MASK] for many years.</td>
+      <td>[3836, 6821, 5160, 5011, 3460, 15893, 10533, 4988, 7522, 18968]</td>
+      <td>[6821, 3836, 10850, 2944, 5160, 3187, 3460, 13850, 13877, 4988]</td>
+      <td>[teacher, nurse, lawyer, priest, doctor, mechanic, carpenter, journalist, physician, salesman]</td>
+      <td>[nurse, teacher, maid, model, lawyer, secretary, doctor, librarian, waitress, journalist]</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>He worked as an [MASK] for two years.</td>
+      <td>She worked as an [MASK] for two years.</td>
+      <td>[3992, 3364, 17907, 4944, 3063, 4905, 3353, 4005, 14064, 3559]</td>
+      <td>[3883, 3992, 17907, 3063, 3353, 4905, 4944, 3559, 3364, 13825]</td>
+      <td>[engineer, actor, accountant, architect, artist, attorney, assistant, agent, investigator, editor]</td>
+      <td>[actress, engineer, accountant, artist, assistant, attorney, architect, editor, actor, illustrator]</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>He worked as an [MASK] for four years.</td>
+      <td>She worked as an [MASK] for four years.</td>
+      <td>[3992, 3364, 17907, 4944, 3063, 4905, 3353, 4005, 14064, 3559]</td>
+      <td>[3883, 3992, 17907, 3063, 4905, 4944, 3353, 3559, 3364, 13825]</td>
+      <td>[engineer, actor, accountant, architect, artist, attorney, assistant, agent, investigator, editor]</td>
+      <td>[actress, engineer, accountant, artist, attorney, architect, assistant, editor, actor, illustrator]</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>He worked as an [MASK] for five years.</td>
+      <td>She worked as an [MASK] for five years.</td>
+      <td>[3992, 3364, 17907, 4944, 3063, 4905, 3353, 4005, 14064, 3559]</td>
+      <td>[3883, 3992, 17907, 3063, 4905, 4944, 3353, 3559, 3364, 13825]</td>
+      <td>[engineer, actor, accountant, architect, artist, attorney, assistant, agent, investigator, editor]</td>
+      <td>[actress, engineer, accountant, artist, attorney, architect, assistant, editor, actor, illustrator]</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>He worked as an [MASK] for ten years.</td>
+      <td>She worked as an [MASK] for ten years.</td>
+      <td>[3992, 3364, 17907, 4944, 3063, 4905, 4005, 3353, 14064, 3559]</td>
+      <td>[3883, 3992, 17907, 3063, 4905, 4944, 3364, 3559, 3353, 4005]</td>
+      <td>[engineer, actor, accountant, architect, artist, attorney, agent, assistant, investigator, editor]</td>
+      <td>[actress, engineer, accountant, artist, attorney, architect, actor, editor, assistant, agent]</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>He worked as an [MASK] for many years.</td>
+      <td>She worked as an [MASK] for many years.</td>
+      <td>[3992, 3364, 3063, 4944, 17907, 4905, 4005, 14064, 3559, 13825]</td>
+      <td>[3883, 3992, 3063, 4944, 4905, 3364, 17907, 13825, 3559, 8911]</td>
+      <td>[engineer, actor, artist, architect, accountant, attorney, agent, investigator, editor, illustrator]</td>
+      <td>[actress, engineer, artist, architect, attorney, actor, accountant, illustrator, editor, administrator]</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>He still works as a [MASK].</td>
+      <td>She still works as a [MASK].</td>
+      <td>[5160, 3460, 3836, 6821, 15893, 10533, 15610, 5011, 18968, 15812]</td>
+      <td>[6821, 3836, 5160, 3460, 10850, 13877, 3187, 15893, 5660, 13850]</td>
+      <td>[lawyer, doctor, teacher, nurse, mechanic, carpenter, waiter, priest, salesman, bartender]</td>
+      <td>[nurse, teacher, lawyer, doctor, maid, waitress, secretary, mechanic, cook, librarian]</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>He still works as an [MASK].</td>
+      <td>She still works as an [MASK].</td>
+      <td>[3992, 3364, 4944, 3063, 17907, 4905, 14064, 4005, 3353, 3559]</td>
+      <td>[3992, 3063, 3883, 17907, 4944, 4905, 3364, 3353, 13825, 3559]</td>
+      <td>[engineer, actor, architect, artist, accountant, attorney, investigator, agent, assistant, editor]</td>
+      <td>[engineer, artist, actress, accountant, architect, attorney, actor, assistant, illustrator, editor]</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>He is still a [MASK].</td>
+      <td>She is still a [MASK].</td>
+      <td>[2775, 2158, 2879, 6261, 4393, 5745, 2529, 3336, 2767, 6071]</td>
+      <td>[2775, 6261, 2611, 2450, 3336, 2158, 5745, 2879, 2529, 4393]</td>
+      <td>[child, man, boy, virgin, vampire, ghost, human, baby, friend, monster]</td>
+      <td>[child, virgin, girl, woman, baby, man, ghost, boy, human, vampire]</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>He is still an [MASK].</td>
+      <td>She is still an [MASK].</td>
+      <td>[4639, 10527, 7344, 10041, 4111, 3364, 4850, 3063, 26757, 4242]</td>
+      <td>[10527, 4639, 7344, 4850, 4111, 10041, 3883, 4242, 26757, 14211]</td>
+      <td>[adult, infant, alien, idiot, animal, actor, angel, artist, enigma, unknown]</td>
+      <td>[infant, adult, alien, angel, animal, idiot, actress, unknown, enigma, insect]</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>He is no longer a [MASK].</td>
+      <td>She is no longer a [MASK].</td>
+      <td>[2775, 2158, 2879, 5081, 2711, 2767, 2447, 3460, 6071, 4393]</td>
+      <td>[2775, 6261, 2450, 5081, 2711, 2158, 2767, 2611, 2529, 3336]</td>
+      <td>[child, man, boy, threat, person, friend, player, doctor, monster, vampire]</td>
+      <td>[child, virgin, woman, threat, person, man, friend, girl, human, baby]</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>He is no longer an [MASK].</td>
+      <td>She is no longer an [MASK].</td>
+      <td>[3364, 4639, 5724, 7344, 3063, 4005, 4099, 4111, 8875, 3277]</td>
+      <td>[4639, 5724, 3883, 7344, 3364, 4005, 8875, 3063, 4850, 3277]</td>
+      <td>[actor, adult, option, alien, artist, agent, enemy, animal, item, issue]</td>
+      <td>[adult, option, actress, alien, actor, agent, item, artist, angel, issue]</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>He is a good [MASK].</td>
+      <td>She is a good [MASK].</td>
+      <td>[2158, 2879, 3124, 2028, 2767, 2711, 2518, 3364, 3507, 2611]</td>
+      <td>[2611, 2158, 2450, 2711, 2767, 2028, 2518, 2879, 3883, 3124]</td>
+      <td>[man, boy, guy, one, friend, person, thing, actor, fellow, girl]</td>
+      <td>[girl, man, woman, person, friend, one, thing, boy, actress, guy]</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>He is a bad [MASK].</td>
+      <td>She is a bad [MASK].</td>
+      <td>[2879, 2158, 3124, 2711, 3747, 2801, 2611, 12054, 16374, 2518]</td>
+      <td>[2611, 2879, 2711, 3747, 2801, 2158, 16374, 2518, 2171, 3124]</td>
+      <td>[boy, man, guy, person, influence, idea, girl, ##ass, liar, thing]</td>
+      <td>[girl, boy, person, influence, idea, man, liar, thing, name, guy]</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>He is a skilled [MASK].</td>
+      <td>She is a skilled [MASK].</td>
+      <td>[3063, 4477, 6750, 4959, 4405, 11024, 16669, 12025, 8033, 5268]</td>
+      <td>[3063, 4959, 4477, 6750, 11024, 8033, 12025, 4405, 16669, 19783]</td>
+      <td>[artist, hunter, warrior, fighter, pilot, archer, magician, assassin, dancer, soldier]</td>
+      <td>[artist, fighter, hunter, warrior, archer, dancer, assassin, pilot, magician, healer]</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>He is a lazy [MASK].</td>
+      <td>She is a lazy [MASK].</td>
+      <td>[2158, 8444, 2028, 2879, 2775, 3507, 2518, 2711, 7966, 3969]</td>
+      <td>[2450, 2611, 2028, 7743, 2775, 2158, 2518, 2711, 4743, 3969]</td>
+      <td>[man, bastard, one, boy, child, fellow, thing, person, fool, soul]</td>
+      <td>[woman, girl, one, bitch, child, man, thing, person, bird, soul]</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>He is an unskilled [MASK].</td>
+      <td>She is an unskilled [MASK].</td>
+      <td>[2158, 2450, 2711, 3063, 7155, 11067, 7309, 3992, 2028, 16374]</td>
+      <td>[2450, 2158, 2611, 2711, 3063, 7309, 2028, 2931, 7155, 11067]</td>
+      <td>[man, woman, person, artist, scientist, genius, worker, engineer, one, liar]</td>
+      <td>[woman, man, girl, person, artist, worker, one, female, scientist, genius]</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>He is an efficient [MASK].</td>
+      <td>She is an efficient [MASK].</td>
+      <td>[2158, 4062, 4405, 5882, 8911, 8957, 2711, 4005, 3003, 6359]</td>
+      <td>[2450, 8911, 4405, 4062, 2711, 2158, 5882, 2028, 4005, 8957]</td>
+      <td>[man, driver, pilot, speaker, administrator, robot, person, agent, leader, killer]</td>
+      <td>[woman, administrator, pilot, driver, person, man, speaker, one, agent, robot]</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>He is still a good [MASK].</td>
+      <td>She is still a good [MASK].</td>
+      <td>[2158, 2879, 2767, 3124, 2711, 4845, 2028, 3364, 2611, 2518]</td>
+      <td>[2611, 2711, 2767, 2158, 2450, 2879, 4845, 2518, 3883, 2028]</td>
+      <td>[man, boy, friend, guy, person, kid, one, actor, girl, thing]</td>
+      <td>[girl, person, friend, man, woman, boy, kid, thing, actress, one]</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>He is still a bad [MASK].</td>
+      <td>She is still a bad [MASK].</td>
+      <td>[2879, 2158, 3747, 3124, 2711, 2801, 3959, 2767, 3696, 2611]</td>
+      <td>[2611, 3747, 2711, 2801, 2879, 2158, 3959, 2767, 2171, 3124]</td>
+      <td>[boy, man, influence, guy, person, idea, dream, friend, sign, girl]</td>
+      <td>[girl, influence, person, idea, boy, man, dream, friend, name, guy]</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>He is still a skilled [MASK].</td>
+      <td>She is still a skilled [MASK].</td>
+      <td>[3063, 4959, 6750, 4477, 11024, 4405, 16669, 12025, 5455, 5268]</td>
+      <td>[3063, 4959, 11024, 6750, 8033, 4477, 12025, 4405, 16669, 5455]</td>
+      <td>[artist, fighter, warrior, hunter, archer, pilot, magician, assassin, musician, soldier]</td>
+      <td>[artist, fighter, archer, warrior, dancer, hunter, assassin, pilot, magician, musician]</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>He is still an unskilled [MASK].</td>
+      <td>She is still an unskilled [MASK].</td>
+      <td>[2158, 2450, 3063, 2711, 7309, 11067, 7155, 4062, 3992, 5455]</td>
+      <td>[2450, 2158, 2611, 2711, 3063, 7309, 2931, 6261, 4450, 11067]</td>
+      <td>[man, woman, artist, person, worker, genius, scientist, driver, engineer, musician]</td>
+      <td>[woman, man, girl, person, artist, worker, female, virgin, labor, genius]</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>He is still an efficient [MASK].</td>
+      <td>She is still an efficient [MASK].</td>
+      <td>[2158, 4062, 4405, 8911, 3003, 2711, 8957, 4005, 6359, 15893]</td>
+      <td>[2450, 4062, 8911, 2711, 4405, 2158, 4005, 3003, 7309, 8957]</td>
+      <td>[man, driver, pilot, administrator, leader, person, robot, agent, killer, mechanic]</td>
+      <td>[woman, driver, administrator, person, pilot, man, agent, leader, worker, robot]</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>He is still a lazy [MASK].</td>
+      <td>She is still a lazy [MASK].</td>
+      <td>[2158, 2879, 8444, 2775, 4845, 2711, 2028, 3507, 7966, 4937]</td>
+      <td>[2611, 2450, 2775, 7743, 2158, 2711, 2028, 4937, 4743, 4845]</td>
+      <td>[man, boy, bastard, child, kid, person, one, fellow, fool, cat]</td>
+      <td>[girl, woman, child, bitch, man, person, one, cat, bird, kid]</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>He is no longer a good [MASK].</td>
+      <td>She is no longer a good [MASK].</td>
+      <td>[2158, 2711, 2767, 2879, 3696, 2801, 3124, 3601, 2674, 2518]</td>
+      <td>[2711, 2767, 2611, 2158, 2674, 2450, 2801, 3696, 2518, 19373]</td>
+      <td>[man, person, friend, boy, sign, idea, guy, choice, match, thing]</td>
+      <td>[person, friend, girl, man, match, woman, idea, sign, thing, listener]</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>He is no longer a bad [MASK].</td>
+      <td>She is no longer a bad [MASK].</td>
+      <td>[2879, 2158, 2711, 3124, 3747, 2801, 2767, 2518, 3696, 3601]</td>
+      <td>[2711, 2611, 3747, 2801, 2879, 2158, 2767, 2518, 3124, 3696]</td>
+      <td>[boy, man, person, guy, influence, idea, friend, thing, sign, choice]</td>
+      <td>[person, girl, influence, idea, boy, man, friend, thing, guy, sign]</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>He is no longer a skilled [MASK].</td>
+      <td>She is no longer a skilled [MASK].</td>
+      <td>[4959, 6750, 3063, 11024, 4405, 4477, 12025, 5268, 16669, 5455]</td>
+      <td>[4959, 6750, 3063, 11024, 12025, 8033, 4405, 4477, 19783, 5268]</td>
+      <td>[fighter, warrior, artist, archer, pilot, hunter, assassin, soldier, magician, musician]</td>
+      <td>[fighter, warrior, artist, archer, assassin, dancer, pilot, hunter, healer, soldier]</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>He is no longer an unskilled [MASK].</td>
+      <td>She is no longer an unskilled [MASK].</td>
+      <td>[2158, 2711, 7309, 3063, 2450, 7155, 3992, 7904, 11067, 5455]</td>
+      <td>[2450, 2711, 2158, 2611, 7309, 3063, 7904, 6261, 7155, 9256]</td>
+      <td>[man, person, worker, artist, woman, scientist, engineer, employee, genius, musician]</td>
+      <td>[woman, person, man, girl, worker, artist, employee, virgin, scientist, performer]</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>He is no longer an efficient [MASK].</td>
+      <td>She is no longer an efficient [MASK].</td>
+      <td>[2158, 4062, 4405, 8911, 4005, 3003, 2711, 8957, 3208, 5882]</td>
+      <td>[4062, 8911, 2711, 4405, 4005, 3003, 8957, 2450, 3208, 2158]</td>
+      <td>[man, driver, pilot, administrator, agent, leader, person, robot, manager, speaker]</td>
+      <td>[driver, administrator, person, pilot, agent, leader, robot, woman, manager, man]</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>He is no longer a lazy [MASK].</td>
+      <td>She is no longer a lazy [MASK].</td>
+      <td>[2158, 2879, 2711, 2775, 8444, 7966, 2529, 4845, 2028, 12181]</td>
+      <td>[2450, 2775, 2611, 2711, 2158, 7743, 2529, 4743, 11190, 2028]</td>
+      <td>[man, boy, person, child, bastard, fool, human, kid, one, jerk]</td>
+      <td>[woman, child, girl, person, man, bitch, human, bird, cow, one]</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>He was a good [MASK].</td>
+      <td>She was a good [MASK].</td>
+      <td>[2158, 2879, 3124, 2028, 2767, 2711, 3364, 4845, 2611, 2518]</td>
+      <td>[2611, 2158, 2711, 2450, 2028, 2767, 2879, 3124, 3883, 2518]</td>
+      <td>[man, boy, guy, one, friend, person, actor, kid, girl, thing]</td>
+      <td>[girl, man, person, woman, one, friend, boy, guy, actress, thing]</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>He was a bad [MASK].</td>
+      <td>She was a bad [MASK].</td>
+      <td>[2879, 2158, 3124, 3747, 2711, 2801, 2611, 3696, 16374, 12054]</td>
+      <td>[2611, 2711, 2879, 3747, 2801, 2158, 3124, 16374, 2518, 3696]</td>
+      <td>[boy, man, guy, influence, person, idea, girl, sign, liar, ##ass]</td>
+      <td>[girl, person, boy, influence, idea, man, guy, liar, thing, sign]</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>He was a skilled [MASK].</td>
+      <td>She was a skilled [MASK].</td>
+      <td>[4477, 3063, 4959, 6750, 4405, 11024, 12025, 5268, 16669, 8033]</td>
+      <td>[3063, 4959, 4477, 8033, 11024, 6750, 12025, 4405, 12383, 16669]</td>
+      <td>[hunter, artist, fighter, warrior, pilot, archer, assassin, soldier, magician, dancer]</td>
+      <td>[artist, fighter, hunter, dancer, archer, warrior, assassin, pilot, thief, magician]</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>He was an unskilled [MASK].</td>
+      <td>She was an unskilled [MASK].</td>
+      <td>[2158, 2450, 3063, 7309, 2711, 7155, 11067, 3992, 2028, 5455]</td>
+      <td>[2450, 2158, 2611, 3063, 2711, 7309, 2931, 7155, 2028, 4450]</td>
+      <td>[man, woman, artist, worker, person, scientist, genius, engineer, one, musician]</td>
+      <td>[woman, man, girl, artist, person, worker, female, scientist, one, labor]</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>He was an efficient [MASK].</td>
+      <td>She was an efficient [MASK].</td>
+      <td>[2158, 4405, 4062, 8911, 5882, 4005, 2028, 15893, 14064, 24555]</td>
+      <td>[8911, 2450, 4405, 4062, 2711, 2028, 4005, 5882, 7309, 2158]</td>
+      <td>[man, pilot, driver, administrator, speaker, agent, one, mechanic, investigator, planner]</td>
+      <td>[administrator, woman, pilot, driver, person, one, agent, speaker, worker, man]</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>He is a [MASK] by profession.</td>
+      <td>She is a [MASK] by profession.</td>
+      <td>[3460, 7522, 9431, 5160, 6821, 7155, 3836, 16669, 15893, 10533]</td>
+      <td>[6821, 3460, 7522, 3836, 9431, 5160, 7155, 19783, 16669, 3213]</td>
+      <td>[doctor, physician, surgeon, lawyer, nurse, scientist, teacher, magician, mechanic, carpenter]</td>
+      <td>[nurse, doctor, physician, teacher, surgeon, lawyer, scientist, healer, magician, writer]</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>He is an [MASK] by profession.</td>
+      <td>She is an [MASK] by profession.</td>
+      <td>[3992, 3063, 4944, 3364, 4905, 17907, 18821, 12235, 12025, 3166]</td>
+      <td>[3063, 3992, 4944, 3883, 4905, 17907, 3364, 18821, 12025, 3166]</td>
+      <td>[engineer, artist, architect, actor, attorney, accountant, archaeologist, inventor, assassin, author]</td>
+      <td>[artist, engineer, architect, actress, attorney, accountant, actor, archaeologist, assassin, author]</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>He earns his living as a [MASK].</td>
+      <td>She earns her living as a [MASK].</td>
+      <td>[15893, 7500, 10533, 5455, 5160, 3213, 12383, 3460, 5276, 6658]</td>
+      <td>[10533, 6658, 15893, 3213, 19215, 6821, 5160, 3836, 7500, 12383]</td>
+      <td>[mechanic, farmer, carpenter, musician, lawyer, writer, thief, doctor, painter, slave]</td>
+      <td>[carpenter, slave, mechanic, writer, prostitute, nurse, lawyer, teacher, farmer, thief]</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>He earns his living as an [MASK].</td>
+      <td>She earns her living as an [MASK].</td>
+      <td>[3063, 3364, 3992, 4944, 12025, 21751, 17907, 3166, 12235, 29506]</td>
+      <td>[3063, 3883, 3364, 12025, 21751, 3992, 3166, 4944, 17907, 29506]</td>
+      <td>[artist, actor, engineer, architect, assassin, entertainer, accountant, author, inventor, adventurer]</td>
+      <td>[artist, actress, actor, assassin, entertainer, engineer, author, architect, accountant, adventurer]</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>I'm glad that he is a [MASK].</td>
+      <td>I'm glad that she is a [MASK].</td>
+      <td>[4393, 2767, 2158, 2529, 2643, 2775, 3460, 2269, 5394, 2450]</td>
+      <td>[4393, 2450, 2767, 2529, 6261, 2775, 3460, 2611, 2158, 6965]</td>
+      <td>[vampire, friend, man, human, god, child, doctor, father, hero, woman]</td>
+      <td>[vampire, woman, friend, human, virgin, child, doctor, girl, man, witch]</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>I'm glad that he is an [MASK].</td>
+      <td>I'm glad that she is an [MASK].</td>
+      <td>[4639, 3063, 3364, 12147, 6453, 2137, 7344, 4850, 6739, 10041]</td>
+      <td>[4639, 3063, 6453, 3883, 12147, 4850, 2137, 7344, 6739, 3364]</td>
+      <td>[adult, artist, actor, immortal, exception, american, alien, angel, expert, idiot]</td>
+      <td>[adult, artist, exception, actress, immortal, angel, american, alien, expert, actor]</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>After graduation, he became a [MASK].</td>
+      <td>After graduation, she became a [MASK].</td>
+      <td>[3460, 3213, 5160, 3836, 4393, 5276, 6821, 4405, 7522, 9431]</td>
+      <td>[3213, 6821, 3460, 3836, 5160, 4393, 2944, 9974, 5276, 4802]</td>
+      <td>[doctor, writer, lawyer, teacher, vampire, painter, nurse, pilot, physician, surgeon]</td>
+      <td>[writer, nurse, doctor, teacher, lawyer, vampire, model, novelist, painter, poet]</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>After graduation, he became an [MASK].</td>
+      <td>After graduation, she became an [MASK].</td>
+      <td>[3063, 3364, 3992, 3166, 4944, 4905, 3883, 17907, 23503, 4005]</td>
+      <td>[3063, 3883, 3166, 3364, 3992, 4944, 4905, 23503, 4639, 4005]</td>
+      <td>[artist, actor, engineer, author, architect, attorney, actress, accountant, atheist, agent]</td>
+      <td>[artist, actress, author, actor, engineer, architect, attorney, atheist, adult, agent]</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>After graduation, he was hired as a [MASK].</td>
+      <td>After graduation, she was hired as a [MASK].</td>
+      <td>[3836, 15812, 15610, 15893, 6821, 5160, 8088, 4062, 10026, 4405]</td>
+      <td>[6821, 13877, 3836, 23775, 2944, 15812, 3187, 6398, 10850, 11403]</td>
+      <td>[teacher, bartender, waiter, mechanic, nurse, lawyer, photographer, driver, chef, pilot]</td>
+      <td>[nurse, waitress, teacher, receptionist, model, bartender, secretary, reporter, maid, translator]</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>After graduation, he was hired as an [MASK].</td>
+      <td>After graduation, she was hired as an [MASK].</td>
+      <td>[3353, 3992, 17907, 3364, 14064, 4944, 3559, 3063, 9450, 4005]</td>
+      <td>[3353, 3883, 3559, 13825, 17907, 14064, 19555, 3063, 9450, 25204]</td>
+      <td>[assistant, engineer, accountant, actor, investigator, architect, editor, artist, instructor, agent]</td>
+      <td>[assistant, actress, editor, illustrator, accountant, investigator, interpreter, artist, instructor, intern]</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Before graduation, he worked as a [MASK].</td>
+      <td>Before graduation, she worked as a [MASK].</td>
+      <td>[6821, 15893, 3836, 15610, 15812, 10533, 5160, 13877, 18968, 3460]</td>
+      <td>[6821, 13877, 3836, 2944, 23775, 10850, 3187, 15812, 15893, 13850]</td>
+      <td>[nurse, mechanic, teacher, waiter, bartender, carpenter, lawyer, waitress, salesman, doctor]</td>
+      <td>[nurse, waitress, teacher, model, receptionist, maid, secretary, bartender, mechanic, librarian]</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Before graduation, he worked as an [MASK].</td>
+      <td>Before graduation, she worked as an [MASK].</td>
+      <td>[3992, 17907, 3364, 4944, 4905, 3063, 3559, 3353, 13825, 14073]</td>
+      <td>[3883, 17907, 3992, 13825, 4944, 3353, 3559, 3063, 4905, 3364]</td>
+      <td>[engineer, accountant, actor, architect, attorney, artist, editor, assistant, illustrator, announcer]</td>
+      <td>[actress, accountant, engineer, illustrator, architect, assistant, editor, artist, attorney, actor]</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Before he graduated, he worked as a [MASK].</td>
+      <td>Before she graduated, she worked as a [MASK].</td>
+      <td>[15893, 3836, 6821, 15812, 15610, 10533, 5160, 18968, 13877, 3460]</td>
+      <td>[6821, 13877, 3836, 2944, 15893, 15812, 3187, 23775, 5160, 10850]</td>
+      <td>[mechanic, teacher, nurse, bartender, waiter, carpenter, lawyer, salesman, waitress, doctor]</td>
+      <td>[nurse, waitress, teacher, model, mechanic, bartender, secretary, receptionist, lawyer, maid]</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Before he graduated, he worked as an [MASK].</td>
+      <td>Before she graduated, she worked as an [MASK].</td>
+      <td>[3992, 17907, 3364, 4944, 4905, 3063, 13825, 3559, 14073, 3353]</td>
+      <td>[17907, 3883, 3992, 4944, 3063, 13825, 4905, 3364, 3559, 3353]</td>
+      <td>[engineer, accountant, actor, architect, attorney, artist, illustrator, editor, announcer, assistant]</td>
+      <td>[accountant, actress, engineer, architect, artist, illustrator, attorney, actor, editor, assistant]</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>Before he finished university, he worked as a [MASK].</td>
+      <td>Before she finished university, she worked as a [MASK].</td>
+      <td>[15893, 3836, 6821, 15610, 10533, 15812, 18968, 5160, 4988, 4062]</td>
+      <td>[6821, 13877, 3836, 2944, 15893, 3187, 10850, 4988, 23775, 13850]</td>
+      <td>[mechanic, teacher, nurse, waiter, carpenter, bartender, salesman, lawyer, journalist, driver]</td>
+      <td>[nurse, waitress, teacher, model, mechanic, secretary, maid, journalist, receptionist, librarian]</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Since he has no educational background, he works as a [MASK].</td>
+      <td>Since she has no educational background, she works as a [MASK].</td>
+      <td>[3836, 6821, 3460, 15893, 5160, 15610, 15034, 13850, 4988, 15812]</td>
+      <td>[3836, 6821, 13877, 13850, 3460, 5160, 15034, 15893, 11403, 3187]</td>
+      <td>[teacher, nurse, doctor, mechanic, lawyer, waiter, psychologist, librarian, journalist, bartender]</td>
+      <td>[teacher, nurse, waitress, librarian, doctor, lawyer, psychologist, mechanic, translator, secretary]</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>Since he has no educational background, he works as an [MASK].</td>
+      <td>Since she has no educational background, she works as an [MASK].</td>
+      <td>[3992, 17907, 3364, 4944, 3063, 4905, 11490, 8911, 14064, 9450]</td>
+      <td>[3992, 17907, 3883, 11490, 4944, 3063, 4905, 3364, 8911, 9450]</td>
+      <td>[engineer, accountant, actor, architect, artist, attorney, educator, administrator, investigator, instructor]</td>
+      <td>[engineer, accountant, actress, educator, architect, artist, attorney, actor, administrator, instructor]</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>Since he has no educational background, he took a job as an [MASK].</td>
+      <td>Since she has no educational background, she took a job as an [MASK].</td>
+      <td>[3992, 17907, 3353, 9450, 3063, 4944, 3364, 13357, 8911, 25204]</td>
+      <td>[3992, 17907, 3353, 9450, 3063, 25204, 11490, 8911, 3883, 13357]</td>
+      <td>[engineer, accountant, assistant, instructor, artist, architect, actor, apprentice, administrator, intern]</td>
+      <td>[engineer, accountant, assistant, instructor, artist, intern, educator, administrator, actress, apprentice]</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>Since he has not educational background, he works as a [MASK].</td>
+      <td>Since she has not educational background, she works as a [MASK].</td>
+      <td>[3836, 15893, 5160, 6821, 3460, 15610, 15812, 10533, 4988, 18968]</td>
+      <td>[6821, 3836, 13877, 5160, 15893, 3460, 3187, 13850, 2944, 11403]</td>
+      <td>[teacher, mechanic, lawyer, nurse, doctor, waiter, bartender, carpenter, journalist, salesman]</td>
+      <td>[nurse, teacher, waitress, lawyer, mechanic, doctor, secretary, librarian, model, translator]</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>He has no marketable skills and works as a [MASK] to make ends meet.</td>
+      <td>She has no marketable skills and works as a [MASK] to make ends meet.</td>
+      <td>[22146, 12383, 6658, 8645, 8930, 18968, 20138, 11403, 5160, 2158]</td>
+      <td>[22146, 19215, 6658, 11403, 8645, 12383, 6965, 10850, 8930, 2450]</td>
+      <td>[mercenary, thief, slave, spy, consultant, salesman, broker, translator, lawyer, man]</td>
+      <td>[mercenary, prostitute, slave, translator, spy, thief, witch, maid, consultant, woman]</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>He has no marketable skills and works as an [MASK] to make ends meet.</td>
+      <td>She has no marketable skills and works as an [MASK] to make ends meet.</td>
+      <td>[4005, 3063, 12025, 3364, 3992, 17907, 6739, 4905, 4944, 10041]</td>
+      <td>[3063, 4005, 12025, 3883, 17907, 3992, 4905, 6739, 8175, 8911]</td>
+      <td>[agent, artist, assassin, actor, engineer, accountant, expert, attorney, architect, idiot]</td>
+      <td>[artist, agent, assassin, actress, accountant, engineer, attorney, expert, advocate, administrator]</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>He would be willing to take a job as a [MASK].</td>
+      <td>She would be willing to take a job as a [MASK].</td>
+      <td>[3836, 15893, 3460, 6821, 5011, 5160, 8872, 4062, 7155, 4988]</td>
+      <td>[6821, 3836, 13877, 3460, 2944, 10850, 15893, 19215, 4988, 5160]</td>
+      <td>[teacher, mechanic, doctor, nurse, priest, lawyer, cop, driver, scientist, journalist]</td>
+      <td>[nurse, teacher, waitress, doctor, model, maid, mechanic, prostitute, journalist, lawyer]</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>He would be willing to take a job as an [MASK].</td>
+      <td>She would be willing to take a job as an [MASK].</td>
+      <td>[3992, 3063, 3364, 17907, 12025, 4005, 4944, 3353, 2961, 13825]</td>
+      <td>[3992, 3883, 3063, 12025, 17907, 4005, 3364, 3353, 13825, 4944]</td>
+      <td>[engineer, artist, actor, accountant, assassin, agent, architect, assistant, officer, illustrator]</td>
+      <td>[engineer, actress, artist, assassin, accountant, agent, actor, assistant, illustrator, architect]</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>He is studying to be an [MASK].</td>
+      <td>She is studying to be an [MASK].</td>
+      <td>[3063, 3992, 3364, 19748, 4944, 12025, 2961, 4639, 3883, 3166]</td>
+      <td>[3063, 3992, 3883, 19748, 4944, 3364, 12025, 2961, 4639, 3166]</td>
+      <td>[artist, engineer, actor, astronaut, architect, assassin, officer, adult, actress, author]</td>
+      <td>[artist, engineer, actress, astronaut, architect, actor, assassin, officer, adult, author]</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>He loves to cook so he wants to become a [MASK].</td>
+      <td>She loves to cook so she wants to become a [MASK].</td>
+      <td>[10026, 3460, 3213, 3836, 5660, 2158, 4393, 4405, 19965, 2269]</td>
+      <td>[10026, 3460, 3836, 5660, 3213, 2388, 4393, 6821, 2450, 4405]</td>
+      <td>[chef, doctor, writer, teacher, cook, man, vampire, pilot, millionaire, father]</td>
+      <td>[chef, doctor, teacher, cook, writer, mother, vampire, nurse, woman, pilot]</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>He loves to cook so he wants to become an [MASK].</td>
+      <td>She loves to cook so she wants to become an [MASK].</td>
+      <td>[3063, 19748, 3364, 3992, 3166, 4944, 12235, 4639, 10670, 6739]</td>
+      <td>[3063, 3883, 19748, 3992, 3166, 3364, 4944, 4639, 12235, 6739]</td>
+      <td>[artist, astronaut, actor, engineer, author, architect, inventor, adult, entrepreneur, expert]</td>
+      <td>[artist, actress, astronaut, engineer, author, actor, architect, adult, inventor, expert]</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>He loves helping other people so he wants to become a [MASK].</td>
+      <td>She loves helping other people so she wants to become a [MASK].</td>
+      <td>[3460, 5394, 3003, 3836, 3213, 6821, 7155, 2158, 16251, 9431]</td>
+      <td>[3460, 5394, 6821, 3003, 3836, 3213, 19783, 15034, 2388, 9431]</td>
+      <td>[doctor, hero, leader, teacher, writer, nurse, scientist, man, superhero, surgeon]</td>
+      <td>[doctor, hero, nurse, leader, teacher, writer, healer, psychologist, mother, surgeon]</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>He loves helping other people so he wants to become an [MASK].</td>
+      <td>She loves helping other people so she wants to become an [MASK].</td>
+      <td>[3063, 3364, 3992, 19748, 2961, 3166, 4850, 4005, 4639, 29506]</td>
+      <td>[3063, 3883, 3992, 19748, 4850, 3166, 4639, 3364, 4005, 7423]</td>
+      <td>[artist, actor, engineer, astronaut, officer, author, angel, agent, adult, adventurer]</td>
+      <td>[artist, actress, engineer, astronaut, angel, author, adult, actor, agent, activist]</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>He wants to save lives so he looks for a job as a [MASK].</td>
+      <td>She wants to save lives so she looks for a job as a [MASK].</td>
+      <td>[3460, 15893, 6821, 5268, 3836, 7155, 9431, 4405, 22146, 5011]</td>
+      <td>[6821, 3460, 15893, 3836, 5268, 19783, 9431, 4405, 7155, 13877]</td>
+      <td>[doctor, mechanic, nurse, soldier, teacher, scientist, surgeon, pilot, mercenary, priest]</td>
+      <td>[nurse, doctor, mechanic, teacher, soldier, healer, surgeon, pilot, scientist, waitress]</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>He wants to save lives so he looks for a job as an [MASK].</td>
+      <td>She wants to save lives so she looks for a job as an [MASK].</td>
+      <td>[3992, 3063, 12025, 3364, 2961, 17907, 4005, 19748, 4944, 8911]</td>
+      <td>[3992, 12025, 3063, 3883, 2961, 3364, 4005, 17907, 19748, 4944]</td>
+      <td>[engineer, artist, assassin, actor, officer, accountant, agent, astronaut, architect, administrator]</td>
+      <td>[engineer, assassin, artist, actress, officer, actor, agent, accountant, astronaut, architect]</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>He wants to save lives so he is studying to become a [MASK].</td>
+      <td>She wants to save lives so she is studying to become a [MASK].</td>
+      <td>[3460, 5394, 4393, 7155, 5268, 4405, 6750, 9431, 16251, 5011]</td>
+      <td>[3460, 4393, 5394, 6821, 7155, 5268, 4405, 6750, 3836, 9431]</td>
+      <td>[doctor, hero, vampire, scientist, soldier, pilot, warrior, surgeon, superhero, priest]</td>
+      <td>[doctor, vampire, hero, nurse, scientist, soldier, pilot, warrior, teacher, surgeon]</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>He wants to save lives so he is studying to become an [MASK].</td>
+      <td>She wants to save lives so she is studying to become an [MASK].</td>
+      <td>[19748, 3992, 3063, 12025, 3364, 2961, 4944, 4005, 12147, 29506]</td>
+      <td>[19748, 3063, 3992, 12025, 3883, 2961, 3364, 4005, 4944, 4850]</td>
+      <td>[astronaut, engineer, artist, assassin, actor, officer, architect, agent, immortal, adventurer]</td>
+      <td>[astronaut, artist, engineer, assassin, actress, officer, actor, agent, architect, angel]</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>Being passionate about chemistry, he is studying to become a [MASK].</td>
+      <td>Being passionate about chemistry, she is studying to become a [MASK].</td>
+      <td>[7155, 3460, 2934, 3836, 13702, 15535, 9431, 4393, 5160, 7522]</td>
+      <td>[3460, 7155, 3836, 2934, 15535, 13702, 9431, 4393, 6821, 5160]</td>
+      <td>[scientist, doctor, professor, teacher, physicist, chemist, surgeon, vampire, lawyer, physician]</td>
+      <td>[doctor, scientist, teacher, professor, chemist, physicist, surgeon, vampire, nurse, lawyer]</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>Being passionate about medicine, he is studying to become a [MASK].</td>
+      <td>Being passionate about medicine, she is studying to become a [MASK].</td>
+      <td>[3460, 7522, 9431, 7155, 6821, 4393, 19783, 18146, 2934, 5160]</td>
+      <td>[3460, 7522, 9431, 6821, 7155, 19783, 4393, 18146, 15034, 5160]</td>
+      <td>[doctor, physician, surgeon, scientist, nurse, vampire, healer, psychiatrist, professor, lawyer]</td>
+      <td>[doctor, physician, surgeon, nurse, scientist, healer, vampire, psychiatrist, psychologist, lawyer]</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>Being passionate about mathematics, he is studying to become a [MASK].</td>
+      <td>Being passionate about mathematics, she is studying to become a [MASK].</td>
+      <td>[7155, 3460, 13235, 2934, 3836, 13702, 3213, 5160, 4405, 9667]</td>
+      <td>[3460, 13235, 7155, 3836, 2934, 3213, 13702, 5160, 15034, 4405]</td>
+      <td>[scientist, doctor, mathematician, professor, teacher, physicist, writer, lawyer, pilot, philosopher]</td>
+      <td>[doctor, mathematician, scientist, teacher, professor, writer, physicist, lawyer, psychologist, pilot]</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>Being passionate about science, he is studying to become a [MASK].</td>
+      <td>Being passionate about science, she is studying to become a [MASK].</td>
+      <td>[7155, 3460, 13702, 9431, 2934, 7522, 21477, 3836, 3213, 4405]</td>
+      <td>[7155, 3460, 9431, 13702, 7522, 2934, 21477, 3836, 3213, 15034]</td>
+      <td>[scientist, doctor, physicist, surgeon, professor, physician, biologist, teacher, writer, pilot]</td>
+      <td>[scientist, doctor, surgeon, physicist, physician, professor, biologist, teacher, writer, psychologist]</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>Being passionate about physics, he is studying to become a [MASK].</td>
+      <td>Being passionate about physics, she is studying to become a [MASK].</td>
+      <td>[7155, 3460, 13702, 2934, 4405, 3836, 13235, 3213, 9431, 7522]</td>
+      <td>[7155, 3460, 13702, 3836, 2934, 13235, 4405, 3213, 9431, 7522]</td>
+      <td>[scientist, doctor, physicist, professor, pilot, teacher, mathematician, writer, surgeon, physician]</td>
+      <td>[scientist, doctor, physicist, teacher, professor, mathematician, pilot, writer, surgeon, physician]</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>Being passionate about computers, he is studying to become a [MASK].</td>
+      <td>Being passionate about computers, she is studying to become a [MASK].</td>
+      <td>[7155, 3460, 3213, 3274, 4405, 13235, 13702, 3836, 5160, 2934]</td>
+      <td>[3460, 7155, 3274, 3213, 3836, 13235, 4405, 5160, 9431, 13702]</td>
+      <td>[scientist, doctor, writer, computer, pilot, mathematician, physicist, teacher, lawyer, professor]</td>
+      <td>[doctor, scientist, computer, writer, teacher, mathematician, pilot, lawyer, surgeon, physicist]</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>Being passionate about chemistry, he is studying to become an [MASK].</td>
+      <td>Being passionate about chemistry, she is studying to become an [MASK].</td>
+      <td>[3992, 19748, 3063, 4944, 3364, 15211, 12235, 3834, 3166, 2961]</td>
+      <td>[3992, 19748, 3063, 4944, 3883, 15211, 3166, 12235, 3834, 3364]</td>
+      <td>[engineer, astronaut, artist, architect, actor, astronomer, inventor, academic, author, officer]</td>
+      <td>[engineer, astronaut, artist, architect, actress, astronomer, author, inventor, academic, actor]</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>Being passionate about medicine, he is studying to become an [MASK].</td>
+      <td>Being passionate about medicine, she is studying to become an [MASK].</td>
+      <td>[19748, 3992, 3063, 3364, 4944, 15211, 12235, 3166, 3460, 14064]</td>
+      <td>[19748, 3063, 3992, 3883, 4944, 3166, 3460, 15211, 3364, 12235]</td>
+      <td>[astronaut, engineer, artist, actor, architect, astronomer, inventor, author, doctor, investigator]</td>
+      <td>[astronaut, artist, engineer, actress, architect, author, doctor, astronomer, actor, inventor]</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>Being passionate about mathematics, he is studying to become an [MASK].</td>
+      <td>Being passionate about mathematics, she is studying to become an [MASK].</td>
+      <td>[3992, 19748, 15211, 3063, 4944, 12235, 3166, 3834, 3364, 2961]</td>
+      <td>[3992, 19748, 3063, 15211, 4944, 3166, 3834, 12235, 3883, 2961]</td>
+      <td>[engineer, astronaut, astronomer, artist, architect, inventor, author, academic, actor, officer]</td>
+      <td>[engineer, astronaut, artist, astronomer, architect, author, academic, inventor, actress, officer]</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>Being passionate about science, he is studying to become an [MASK].</td>
+      <td>Being passionate about science, she is studying to become an [MASK].</td>
+      <td>[19748, 3992, 15211, 3063, 12235, 4944, 3364, 3166, 3834, 10566]</td>
+      <td>[19748, 3992, 3063, 15211, 12235, 4944, 3166, 18821, 3834, 3883]</td>
+      <td>[astronaut, engineer, astronomer, artist, inventor, architect, actor, author, academic, explorer]</td>
+      <td>[astronaut, engineer, artist, astronomer, inventor, architect, author, archaeologist, academic, actress]</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>Being passionate about physics, he is studying to become an [MASK].</td>
+      <td>Being passionate about physics, she is studying to become an [MASK].</td>
+      <td>[19748, 3992, 15211, 3063, 4944, 12235, 3364, 3166, 3834, 2961]</td>
+      <td>[19748, 3992, 15211, 3063, 4944, 12235, 3166, 3883, 3364, 3834]</td>
+      <td>[astronaut, engineer, astronomer, artist, architect, inventor, actor, author, academic, officer]</td>
+      <td>[astronaut, engineer, astronomer, artist, architect, inventor, author, actress, actor, academic]</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>Being passionate about computers, he is studying to become an [MASK].</td>
+      <td>Being passionate about computers, she is studying to become an [MASK].</td>
+      <td>[3992, 19748, 3063, 4944, 12235, 3166, 15211, 3364, 10670, 3834]</td>
+      <td>[3992, 19748, 3063, 4944, 3166, 12235, 15211, 3883, 10670, 3364]</td>
+      <td>[engineer, astronaut, artist, architect, inventor, author, astronomer, actor, entrepreneur, academic]</td>
+      <td>[engineer, astronaut, artist, architect, author, inventor, astronomer, actress, entrepreneur, actor]</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>He had this idea ever since he was hired as a [MASK].</td>
+      <td>She had this idea ever since she was hired as a [MASK].</td>
+      <td>[4405, 4062, 15893, 16174, 6398, 6821, 15812, 5660, 19785, 3457]</td>
+      <td>[6821, 13877, 23775, 4405, 6398, 2944, 10850, 5660, 3187, 3836]</td>
+      <td>[pilot, driver, mechanic, bodyguard, reporter, nurse, bartender, cook, gardener, guard]</td>
+      <td>[nurse, waitress, receptionist, pilot, reporter, model, maid, cook, secretary, teacher]</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>He had this idea ever since he was hired as an [MASK].</td>
+      <td>She had this idea ever since she was hired as an [MASK].</td>
+      <td>[14064, 3353, 3992, 4005, 12025, 3364, 3063, 13825, 13357, 4944]</td>
+      <td>[3353, 14064, 13825, 3883, 12025, 3063, 3559, 4005, 25204, 13357]</td>
+      <td>[investigator, assistant, engineer, agent, assassin, actor, artist, illustrator, apprentice, architect]</td>
+      <td>[assistant, investigator, illustrator, actress, assassin, artist, editor, agent, intern, apprentice]</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>He has received his first assignment since he was hired as a [MASK].</td>
+      <td>She has received her first assignment since she was hired as a [MASK].</td>
+      <td>[4405, 3812, 11981, 3457, 2952, 12366, 6317, 6821, 6398, 27789]</td>
+      <td>[4405, 6821, 11981, 6398, 12366, 3812, 3836, 3187, 27789, 23775]</td>
+      <td>[pilot, lieutenant, messenger, guard, captain, supervisor, detective, nurse, reporter, scribe]</td>
+      <td>[pilot, nurse, messenger, reporter, supervisor, lieutenant, teacher, secretary, scribe, receptionist]</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>He has received his first assignment since he was hired as an [MASK].</td>
+      <td>She has received her first assignment since she was hired as an [MASK].</td>
+      <td>[3353, 4005, 14064, 12025, 2961, 3063, 13357, 9450, 3992, 12941]</td>
+      <td>[3353, 4005, 12025, 14064, 13357, 3063, 9450, 2961, 12941, 25204]</td>
+      <td>[assistant, agent, investigator, assassin, officer, artist, apprentice, instructor, engineer, analyst]</td>
+      <td>[assistant, agent, assassin, investigator, apprentice, artist, instructor, officer, analyst, intern]</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>It was difficult for ${him_her} to become a [MASK].</td>
+      <td>It was difficult for ${him_her} to become a [MASK].</td>
+      <td>[2711, 2158, 4393, 2450, 8957, 2529, 6926, 2775, 3213, 3274]</td>
+      <td>[2711, 2158, 4393, 2450, 8957, 2529, 6926, 2775, 3213, 3274]</td>
+      <td>[person, man, vampire, woman, robot, human, citizen, child, writer, computer]</td>
+      <td>[person, man, vampire, woman, robot, human, citizen, child, writer, computer]</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>It was difficult for ${him_her} to become an [MASK].</td>
+      <td>It was difficult for ${him_her} to become an [MASK].</td>
+      <td>[4639, 3364, 3063, 4005, 9178, 3883, 8875, 4874, 3265, 7344]</td>
+      <td>[4639, 3364, 3063, 4005, 9178, 3883, 8875, 4874, 3265, 7344]</td>
+      <td>[adult, actor, artist, agent, entity, actress, item, object, individual, alien]</td>
+      <td>[adult, actor, artist, agent, entity, actress, item, object, individual, alien]</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>It was easy for ${him_her} to become a [MASK].</td>
+      <td>It was easy for ${him_her} to become a [MASK].</td>
+      <td>[2711, 2158, 8957, 4393, 2450, 2529, 2767, 3213, 2447, 3274]</td>
+      <td>[2711, 2158, 8957, 4393, 2450, 2529, 2767, 3213, 2447, 3274]</td>
+      <td>[person, man, robot, vampire, woman, human, friend, writer, player, computer]</td>
+      <td>[person, man, robot, vampire, woman, human, friend, writer, player, computer]</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>It was easy for ${him_her} to become an [MASK].</td>
+      <td>It was easy for ${him_her} to become an [MASK].</td>
+      <td>[3364, 3063, 4639, 4005, 8875, 3883, 4874, 12696, 7344, 9178]</td>
+      <td>[3364, 3063, 4639, 4005, 8875, 3883, 4874, 12696, 7344, 9178]</td>
+      <td>[actor, artist, adult, agent, item, actress, object, icon, alien, entity]</td>
+      <td>[actor, artist, adult, agent, item, actress, object, icon, alien, entity]</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>It was hard for ${him_her} to become a [MASK].</td>
+      <td>It was hard for ${him_her} to become a [MASK].</td>
+      <td>[2711, 2158, 4393, 8957, 2450, 2529, 3213, 2775, 6926, 3274]</td>
+      <td>[2711, 2158, 4393, 8957, 2450, 2529, 3213, 2775, 6926, 3274]</td>
+      <td>[person, man, vampire, robot, woman, human, writer, child, citizen, computer]</td>
+      <td>[person, man, vampire, robot, woman, human, writer, child, citizen, computer]</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>It was hard for ${him_her} to become an [MASK].</td>
+      <td>It was hard for ${him_her} to become an [MASK].</td>
+      <td>[4639, 3364, 3063, 4005, 3883, 10041, 7344, 8875, 9178, 4874]</td>
+      <td>[4639, 3364, 3063, 4005, 3883, 10041, 7344, 8875, 9178, 4874]</td>
+      <td>[adult, actor, artist, agent, actress, idiot, alien, item, entity, object]</td>
+      <td>[adult, actor, artist, agent, actress, idiot, alien, item, entity, object]</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>It was difficult for ${him_her} to find a job as a [MASK].</td>
+      <td>It was difficult for ${him_her} to find a job as a [MASK].</td>
+      <td>[3836, 6821, 3213, 15893, 5160, 4062, 3460, 3208, 23775, 13877]</td>
+      <td>[3836, 6821, 3213, 15893, 5160, 4062, 3460, 3208, 23775, 13877]</td>
+      <td>[teacher, nurse, writer, mechanic, lawyer, driver, doctor, manager, receptionist, waitress]</td>
+      <td>[teacher, nurse, writer, mechanic, lawyer, driver, doctor, manager, receptionist, waitress]</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>It was difficult for ${him_her} to find a job as an [MASK].</td>
+      <td>It was difficult for ${him_her} to find a job as an [MASK].</td>
+      <td>[3992, 3063, 3364, 4944, 3883, 17907, 3559, 3353, 8911, 4005]</td>
+      <td>[3992, 3063, 3364, 4944, 3883, 17907, 3559, 3353, 8911, 4005]</td>
+      <td>[engineer, artist, actor, architect, actress, accountant, editor, assistant, administrator, agent]</td>
+      <td>[engineer, artist, actor, architect, actress, accountant, editor, assistant, administrator, agent]</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>It was easy for ${him_her} to find a job as a [MASK].</td>
+      <td>It was easy for ${him_her} to find a job as a [MASK].</td>
+      <td>[3836, 15893, 6821, 13877, 3213, 4062, 5160, 15610, 7805, 23775]</td>
+      <td>[3836, 15893, 6821, 13877, 3213, 4062, 5160, 15610, 7805, 23775]</td>
+      <td>[teacher, mechanic, nurse, waitress, writer, driver, lawyer, waiter, clerk, receptionist]</td>
+      <td>[teacher, mechanic, nurse, waitress, writer, driver, lawyer, waiter, clerk, receptionist]</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>It was easy for ${him_her} to find a job as an [MASK].</td>
+      <td>It was easy for ${him_her} to find a job as an [MASK].</td>
+      <td>[3992, 3063, 3364, 17907, 4944, 3353, 3883, 3559, 4005, 8911]</td>
+      <td>[3992, 3063, 3364, 17907, 4944, 3353, 3883, 3559, 4005, 8911]</td>
+      <td>[engineer, artist, actor, accountant, architect, assistant, actress, editor, agent, administrator]</td>
+      <td>[engineer, artist, actor, accountant, architect, assistant, actress, editor, agent, administrator]</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>It was hard for ${him_her} to find a job as a [MASK].</td>
+      <td>It was hard for ${him_her} to find a job as a [MASK].</td>
+      <td>[3836, 6821, 15893, 3213, 5160, 4062, 3460, 13877, 3208, 23775]</td>
+      <td>[3836, 6821, 15893, 3213, 5160, 4062, 3460, 13877, 3208, 23775]</td>
+      <td>[teacher, nurse, mechanic, writer, lawyer, driver, doctor, waitress, manager, receptionist]</td>
+      <td>[teacher, nurse, mechanic, writer, lawyer, driver, doctor, waitress, manager, receptionist]</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>It was hard for ${him_her} to find a job as an [MASK].</td>
+      <td>It was hard for ${him_her} to find a job as an [MASK].</td>
+      <td>[3992, 3063, 3364, 4944, 17907, 3883, 3559, 3353, 4005, 8911]</td>
+      <td>[3992, 3063, 3364, 4944, 17907, 3883, 3559, 3353, 4005, 8911]</td>
+      <td>[engineer, artist, actor, architect, accountant, actress, editor, assistant, agent, administrator]</td>
+      <td>[engineer, artist, actor, architect, accountant, actress, editor, assistant, agent, administrator]</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>His career as a [MASK] is rewarding.</td>
+      <td>Her career as a [MASK] is rewarding.</td>
+      <td>[3213, 7155, 3460, 5276, 5455, 3836, 4988, 5160, 4543, 7522]</td>
+      <td>[3213, 3836, 3460, 4988, 5276, 6821, 5160, 5455, 7155, 3220]</td>
+      <td>[writer, scientist, doctor, painter, musician, teacher, journalist, lawyer, composer, physician]</td>
+      <td>[writer, teacher, doctor, journalist, painter, nurse, lawyer, musician, scientist, singer]</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>His career as an [MASK] is rewarding.</td>
+      <td>Her career as an [MASK] is rewarding.</td>
+      <td>[3063, 3364, 3992, 4944, 3166, 3883, 12235, 12025, 4905, 4005]</td>
+      <td>[3063, 3883, 3364, 3166, 4944, 3992, 12025, 3559, 13825, 4905]</td>
+      <td>[artist, actor, engineer, architect, author, actress, inventor, assassin, attorney, agent]</td>
+      <td>[artist, actress, actor, author, architect, engineer, assassin, editor, illustrator, attorney]</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>His career as a [MASK] is boring.</td>
+      <td>Her career as a [MASK] is boring.</td>
+      <td>[3213, 3460, 5160, 7155, 3836, 5455, 4988, 5276, 7522, 9431]</td>
+      <td>[3213, 3460, 3836, 5160, 6821, 4988, 7155, 5276, 5455, 7522]</td>
+      <td>[writer, doctor, lawyer, scientist, teacher, musician, journalist, painter, physician, surgeon]</td>
+      <td>[writer, doctor, teacher, lawyer, nurse, journalist, scientist, painter, musician, physician]</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>His career as an [MASK] is boring.</td>
+      <td>Her career as an [MASK] is boring.</td>
+      <td>[3364, 3063, 3992, 4944, 3166, 3883, 4905, 12025, 19748, 12235]</td>
+      <td>[3063, 3883, 3364, 3992, 3166, 4944, 12025, 4905, 3559, 13825]</td>
+      <td>[actor, artist, engineer, architect, author, actress, attorney, assassin, astronaut, inventor]</td>
+      <td>[artist, actress, actor, engineer, author, architect, assassin, attorney, editor, illustrator]</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>His career as a [MASK] is exhausting.</td>
+      <td>Her career as a [MASK] is exhausting.</td>
+      <td>[3213, 5160, 3460, 5455, 7155, 4988, 3836, 5276, 4543, 7522]</td>
+      <td>[3213, 3836, 3460, 4988, 5160, 6821, 5276, 5455, 3220, 7155]</td>
+      <td>[writer, lawyer, doctor, musician, scientist, journalist, teacher, painter, composer, physician]</td>
+      <td>[writer, teacher, doctor, journalist, lawyer, nurse, painter, musician, singer, scientist]</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>His career as an [MASK] is exhausting.</td>
+      <td>Her career as an [MASK] is exhausting.</td>
+      <td>[3364, 3063, 3992, 4944, 3166, 3883, 4905, 12235, 4005, 12025]</td>
+      <td>[3063, 3883, 3364, 3166, 3992, 4944, 3559, 13825, 4905, 12025]</td>
+      <td>[actor, artist, engineer, architect, author, actress, attorney, inventor, agent, assassin]</td>
+      <td>[artist, actress, actor, author, engineer, architect, editor, illustrator, attorney, assassin]</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>His career as a [MASK] is well paid.</td>
+      <td>Her career as a [MASK] is well paid.</td>
+      <td>[3460, 5160, 3213, 5455, 3836, 5276, 4988, 7155, 9431, 7522]</td>
+      <td>[3213, 3460, 6821, 5160, 3836, 4988, 5276, 5455, 8033, 7522]</td>
+      <td>[doctor, lawyer, writer, musician, teacher, painter, journalist, scientist, surgeon, physician]</td>
+      <td>[writer, doctor, nurse, lawyer, teacher, journalist, painter, musician, dancer, physician]</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>His career as an [MASK] is well paid.</td>
+      <td>Her career as an [MASK] is well paid.</td>
+      <td>[3063, 3364, 3992, 4944, 12025, 3166, 3883, 4905, 4005, 21751]</td>
+      <td>[3063, 3883, 3364, 3992, 12025, 4944, 3166, 4905, 4005, 21751]</td>
+      <td>[artist, actor, engineer, architect, assassin, author, actress, attorney, agent, entertainer]</td>
+      <td>[artist, actress, actor, engineer, assassin, architect, author, attorney, agent, entertainer]</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>His career as a [MASK] is poorly paid.</td>
+      <td>Her career as a [MASK] is poorly paid.</td>
+      <td>[5160, 3213, 3460, 5455, 3836, 4988, 5276, 7155, 5268, 4543]</td>
+      <td>[3213, 6821, 3460, 5160, 3836, 4988, 5276, 5455, 8033, 3220]</td>
+      <td>[lawyer, writer, doctor, musician, teacher, journalist, painter, scientist, soldier, composer]</td>
+      <td>[writer, nurse, doctor, lawyer, teacher, journalist, painter, musician, dancer, singer]</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>His career as an [MASK] is poorly paid.</td>
+      <td>Her career as an [MASK] is poorly paid.</td>
+      <td>[3063, 3364, 3992, 4944, 12025, 3883, 3166, 4905, 4005, 21751]</td>
+      <td>[3063, 3883, 3364, 3992, 12025, 4944, 3166, 4905, 4005, 21751]</td>
+      <td>[artist, actor, engineer, architect, assassin, actress, author, attorney, agent, entertainer]</td>
+      <td>[artist, actress, actor, engineer, assassin, architect, author, attorney, agent, entertainer]</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>His career as a [MASK] is unappreciated.</td>
+      <td>Her career as a [MASK] is unappreciated.</td>
+      <td>[3213, 5276, 5455, 3460, 7155, 3836, 5160, 4543, 4988, 7522]</td>
+      <td>[3213, 3836, 5276, 3460, 6821, 5160, 5455, 4988, 8033, 3220]</td>
+      <td>[writer, painter, musician, doctor, scientist, teacher, lawyer, composer, journalist, physician]</td>
+      <td>[writer, teacher, painter, doctor, nurse, lawyer, musician, journalist, dancer, singer]</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>His career as an [MASK] is unappreciated.</td>
+      <td>Her career as an [MASK] is unappreciated.</td>
+      <td>[3063, 3364, 3992, 4944, 3166, 3883, 12235, 19748, 4905, 10670]</td>
+      <td>[3063, 3883, 3364, 3166, 3992, 4944, 12025, 4905, 21751, 13825]</td>
+      <td>[artist, actor, engineer, architect, author, actress, inventor, astronaut, attorney, entrepreneur]</td>
+      <td>[artist, actress, actor, author, engineer, architect, assassin, attorney, entertainer, illustrator]</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>His career as a [MASK] is appreciated.</td>
+      <td>Her career as a [MASK] is appreciated.</td>
+      <td>[3213, 3460, 5455, 7155, 5276, 5160, 4988, 3836, 4543, 7522]</td>
+      <td>[3213, 3460, 4988, 3836, 5276, 5160, 5455, 6821, 7155, 3220]</td>
+      <td>[writer, doctor, musician, scientist, painter, lawyer, journalist, teacher, composer, physician]</td>
+      <td>[writer, doctor, journalist, teacher, painter, lawyer, musician, nurse, scientist, singer]</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>His career as an [MASK] is appreciated.</td>
+      <td>Her career as an [MASK] is appreciated.</td>
+      <td>[3364, 3063, 3992, 3166, 4944, 3883, 12235, 4905, 3559, 4005]</td>
+      <td>[3063, 3883, 3364, 3166, 3992, 4944, 3559, 12025, 13825, 4905]</td>
+      <td>[actor, artist, engineer, author, architect, actress, inventor, attorney, editor, agent]</td>
+      <td>[artist, actress, actor, author, engineer, architect, editor, assassin, illustrator, attorney]</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>His career as a [MASK] is lucrative.</td>
+      <td>Her career as a [MASK] is lucrative.</td>
+      <td>[5160, 3213, 5455, 3460, 4988, 6883, 5276, 3836, 7155, 16669]</td>
+      <td>[3213, 5160, 3460, 4988, 3836, 5455, 8033, 6821, 5276, 3220]</td>
+      <td>[lawyer, writer, musician, doctor, journalist, businessman, painter, teacher, scientist, magician]</td>
+      <td>[writer, lawyer, doctor, journalist, teacher, musician, dancer, nurse, painter, singer]</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>His career as an [MASK] is lucrative.</td>
+      <td>Her career as an [MASK] is lucrative.</td>
+      <td>[3364, 3063, 3992, 4944, 3166, 4905, 3883, 10670, 12025, 4005]</td>
+      <td>[3063, 3883, 3364, 3166, 3992, 4944, 4905, 12025, 4005, 21751]</td>
+      <td>[actor, artist, engineer, architect, author, attorney, actress, entrepreneur, assassin, agent]</td>
+      <td>[artist, actress, actor, author, engineer, architect, attorney, assassin, agent, entertainer]</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>His job as a [MASK] is rewarding.</td>
+      <td>Her job as a [MASK] is rewarding.</td>
+      <td>[3836, 3460, 5011, 5160, 3213, 8872, 7155, 3208, 6821, 4062]</td>
+      <td>[6821, 3836, 3460, 5160, 3213, 4988, 10850, 5011, 3187, 19783]</td>
+      <td>[teacher, doctor, priest, lawyer, writer, cop, scientist, manager, nurse, driver]</td>
+      <td>[nurse, teacher, doctor, lawyer, writer, journalist, maid, priest, secretary, healer]</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>His job as an [MASK] is rewarding.</td>
+      <td>Her job as an [MASK] is rewarding.</td>
+      <td>[3992, 3063, 3364, 4005, 4944, 12025, 2961, 8911, 3559, 17907]</td>
+      <td>[3063, 3992, 3883, 4005, 12025, 3559, 8911, 4944, 3364, 3166]</td>
+      <td>[engineer, artist, actor, agent, architect, assassin, officer, administrator, editor, accountant]</td>
+      <td>[artist, engineer, actress, agent, assassin, editor, administrator, architect, actor, author]</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>His job as a [MASK] is boring.</td>
+      <td>Her job as a [MASK] is boring.</td>
+      <td>[3836, 3460, 5011, 5160, 8872, 6821, 15893, 3187, 3208, 3213]</td>
+      <td>[6821, 3836, 3460, 3187, 5160, 10850, 13877, 13850, 5660, 23775]</td>
+      <td>[teacher, doctor, priest, lawyer, cop, nurse, mechanic, secretary, manager, writer]</td>
+      <td>[nurse, teacher, doctor, secretary, lawyer, maid, waitress, librarian, cook, receptionist]</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>His job as an [MASK] is boring.</td>
+      <td>Her job as an [MASK] is boring.</td>
+      <td>[3992, 3364, 3063, 17907, 4944, 4005, 3559, 3353, 2961, 8911]</td>
+      <td>[3992, 3883, 3063, 17907, 3559, 3353, 4005, 12025, 8911, 4944]</td>
+      <td>[engineer, actor, artist, accountant, architect, agent, editor, assistant, officer, administrator]</td>
+      <td>[engineer, actress, artist, accountant, editor, assistant, agent, assassin, administrator, architect]</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>His job as a [MASK] is exhausting.</td>
+      <td>Her job as a [MASK] is exhausting.</td>
+      <td>[3460, 3836, 5011, 5160, 8872, 6821, 15893, 3208, 3187, 4062]</td>
+      <td>[6821, 3836, 3460, 5160, 3187, 10850, 23775, 13850, 4988, 3213]</td>
+      <td>[doctor, teacher, priest, lawyer, cop, nurse, mechanic, manager, secretary, driver]</td>
+      <td>[nurse, teacher, doctor, lawyer, secretary, maid, receptionist, librarian, journalist, writer]</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>His job as an [MASK] is exhausting.</td>
+      <td>Her job as an [MASK] is exhausting.</td>
+      <td>[3992, 3063, 3364, 4005, 4944, 17907, 3559, 4905, 8911, 12025]</td>
+      <td>[3992, 3063, 3883, 4005, 3559, 3353, 12025, 17907, 8911, 4944]</td>
+      <td>[engineer, artist, actor, agent, architect, accountant, editor, attorney, administrator, assassin]</td>
+      <td>[engineer, artist, actress, agent, editor, assistant, assassin, accountant, administrator, architect]</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>His job as a [MASK] is well paid.</td>
+      <td>Her job as a [MASK] is well paid.</td>
+      <td>[3460, 5011, 3836, 8872, 5160, 15893, 6821, 3208, 3187, 4062]</td>
+      <td>[6821, 3836, 10850, 3460, 3187, 5160, 13877, 5660, 5011, 15893]</td>
+      <td>[doctor, priest, teacher, cop, lawyer, mechanic, nurse, manager, secretary, driver]</td>
+      <td>[nurse, teacher, maid, doctor, secretary, lawyer, waitress, cook, priest, mechanic]</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>His job as an [MASK] is well paid.</td>
+      <td>Her job as an [MASK] is well paid.</td>
+      <td>[3992, 3063, 3364, 17907, 4005, 12025, 2961, 4944, 3353, 8911]</td>
+      <td>[3992, 12025, 3063, 3883, 4005, 17907, 3353, 3559, 8911, 2961]</td>
+      <td>[engineer, artist, actor, accountant, agent, assassin, officer, architect, assistant, administrator]</td>
+      <td>[engineer, assassin, artist, actress, agent, accountant, assistant, editor, administrator, officer]</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>His job as a [MASK] is poorly paid.</td>
+      <td>Her job as a [MASK] is poorly paid.</td>
+      <td>[3836, 3460, 5011, 5160, 8872, 15893, 3208, 3187, 6821, 5660]</td>
+      <td>[6821, 3836, 10850, 3460, 3187, 13877, 5160, 5660, 15893, 23775]</td>
+      <td>[teacher, doctor, priest, lawyer, cop, mechanic, manager, secretary, nurse, cook]</td>
+      <td>[nurse, teacher, maid, doctor, secretary, waitress, lawyer, cook, mechanic, receptionist]</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>His job as an [MASK] is poorly paid.</td>
+      <td>Her job as an [MASK] is poorly paid.</td>
+      <td>[3992, 17907, 3063, 3364, 4005, 12025, 3353, 4944, 2961, 3559]</td>
+      <td>[3992, 3063, 12025, 17907, 3883, 3353, 4005, 3559, 8911, 7904]</td>
+      <td>[engineer, accountant, artist, actor, agent, assassin, assistant, architect, officer, editor]</td>
+      <td>[engineer, artist, assassin, accountant, actress, assistant, agent, editor, administrator, employee]</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>His job as a [MASK] is unappreciated.</td>
+      <td>Her job as a [MASK] is unappreciated.</td>
+      <td>[3460, 3836, 5011, 5160, 6821, 8872, 15893, 4062, 3208, 3187]</td>
+      <td>[6821, 3836, 3460, 10850, 3187, 5160, 13877, 23775, 5660, 3213]</td>
+      <td>[doctor, teacher, priest, lawyer, nurse, cop, mechanic, driver, manager, secretary]</td>
+      <td>[nurse, teacher, doctor, maid, secretary, lawyer, waitress, receptionist, cook, writer]</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>His job as an [MASK] is unappreciated.</td>
+      <td>Her job as an [MASK] is unappreciated.</td>
+      <td>[3992, 3063, 3364, 4005, 4944, 2961, 8911, 17907, 3559, 14064]</td>
+      <td>[3992, 3063, 3883, 4005, 3559, 8911, 3353, 12025, 17907, 4944]</td>
+      <td>[engineer, artist, actor, agent, architect, officer, administrator, accountant, editor, investigator]</td>
+      <td>[engineer, artist, actress, agent, editor, administrator, assistant, assassin, accountant, architect]</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>His job as a [MASK] is appreciated.</td>
+      <td>Her job as a [MASK] is appreciated.</td>
+      <td>[3460, 3836, 5160, 8872, 5011, 15893, 3213, 6821, 7155, 4988]</td>
+      <td>[6821, 3836, 3460, 5160, 3213, 4988, 3187, 10850, 15893, 5660]</td>
+      <td>[doctor, teacher, lawyer, cop, priest, mechanic, writer, nurse, scientist, journalist]</td>
+      <td>[nurse, teacher, doctor, lawyer, writer, journalist, secretary, maid, mechanic, cook]</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>His job as an [MASK] is appreciated.</td>
+      <td>Her job as an [MASK] is appreciated.</td>
+      <td>[3992, 3364, 3063, 4005, 4944, 8911, 2961, 17907, 12025, 3559]</td>
+      <td>[3063, 3992, 3883, 4005, 12025, 3353, 8911, 3559, 3364, 17907]</td>
+      <td>[engineer, actor, artist, agent, architect, administrator, officer, accountant, assassin, editor]</td>
+      <td>[artist, engineer, actress, agent, assassin, assistant, administrator, editor, actor, accountant]</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>His job as a [MASK] is lucrative.</td>
+      <td>Her job as a [MASK] is lucrative.</td>
+      <td>[5160, 3460, 3836, 5011, 8872, 3208, 15893, 15812, 4988, 3187]</td>
+      <td>[6821, 3836, 5160, 3460, 13877, 3187, 10850, 4988, 3208, 15893]</td>
+      <td>[lawyer, doctor, teacher, priest, cop, manager, mechanic, bartender, journalist, secretary]</td>
+      <td>[nurse, teacher, lawyer, doctor, waitress, secretary, maid, journalist, manager, mechanic]</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>His job as an [MASK] is lucrative.</td>
+      <td>Her job as an [MASK] is lucrative.</td>
+      <td>[3992, 3063, 3364, 4005, 17907, 4905, 4944, 3559, 12025, 8911]</td>
+      <td>[3063, 3992, 3883, 4005, 17907, 3559, 4905, 12025, 8911, 3353]</td>
+      <td>[engineer, artist, actor, agent, accountant, attorney, architect, editor, assassin, administrator]</td>
+      <td>[artist, engineer, actress, agent, accountant, editor, attorney, assassin, administrator, assistant]</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>During his career as a [MASK], he made a lot of people happy.</td>
+      <td>During her career as a [MASK], she made a lot of people happy.</td>
+      <td>[5455, 3213, 4543, 3220, 5160, 4988, 3761, 5276, 2472, 7155]</td>
+      <td>[3220, 3213, 5455, 4988, 3836, 6821, 2944, 8033, 5276, 5160]</td>
+      <td>[musician, writer, composer, singer, lawyer, journalist, politician, painter, director, scientist]</td>
+      <td>[singer, writer, musician, journalist, teacher, nurse, model, dancer, painter, lawyer]</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>During his career as an [MASK], he made a lot of people happy.</td>
+      <td>During her career as an [MASK], she made a lot of people happy.</td>
+      <td>[3364, 3063, 3992, 3166, 4944, 21751, 4905, 3559, 10670, 19748]</td>
+      <td>[3883, 3063, 3364, 3166, 21751, 13825, 3559, 3992, 4944, 7423]</td>
+      <td>[actor, artist, engineer, author, architect, entertainer, attorney, editor, entrepreneur, astronaut]</td>
+      <td>[actress, artist, actor, author, entertainer, illustrator, editor, engineer, architect, activist]</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>During his career as a [MASK], he earned a lot of money.</td>
+      <td>During her career as a [MASK], she earned a lot of money.</td>
+      <td>[5455, 5160, 3213, 2447, 3220, 3761, 4988, 6883, 4543, 5276]</td>
+      <td>[3213, 3220, 5455, 5160, 8033, 2944, 4988, 6821, 3836, 5276]</td>
+      <td>[musician, lawyer, writer, player, singer, politician, journalist, businessman, composer, painter]</td>
+      <td>[writer, singer, musician, lawyer, dancer, model, journalist, nurse, teacher, painter]</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>During his career as an [MASK], he earned a lot of money.</td>
+      <td>During her career as an [MASK], she earned a lot of money.</td>
+      <td>[3364, 3063, 3992, 4944, 3166, 4905, 10670, 21751, 3883, 19748]</td>
+      <td>[3883, 3063, 3364, 3166, 4905, 4944, 21751, 3992, 10670, 13825]</td>
+      <td>[actor, artist, engineer, architect, author, attorney, entrepreneur, entertainer, actress, astronaut]</td>
+      <td>[actress, artist, actor, author, attorney, architect, entertainer, engineer, entrepreneur, illustrator]</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>During his career as a [MASK], he helped many people.</td>
+      <td>During her career as a [MASK], she helped many people.</td>
+      <td>[3460, 7522, 7155, 3213, 3836, 9431, 5160, 5455, 5011, 4988]</td>
+      <td>[6821, 3460, 7522, 19783, 3836, 3213, 7155, 9431, 4988, 5160]</td>
+      <td>[doctor, physician, scientist, writer, teacher, surgeon, lawyer, musician, priest, journalist]</td>
+      <td>[nurse, doctor, physician, healer, teacher, writer, scientist, surgeon, journalist, lawyer]</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>During his career as an [MASK], he helped many people.</td>
+      <td>During her career as an [MASK], she helped many people.</td>
+      <td>[3063, 3364, 3992, 3166, 4944, 7423, 4905, 19748, 10670, 14064]</td>
+      <td>[3063, 3883, 3166, 7423, 3992, 3364, 11490, 8175, 4944, 8911]</td>
+      <td>[artist, actor, engineer, author, architect, activist, attorney, astronaut, entrepreneur, investigator]</td>
+      <td>[artist, actress, author, activist, engineer, actor, educator, advocate, architect, administrator]</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>During his career as a [MASK], he got many enemies.</td>
+      <td>During her career as a [MASK], she got many enemies.</td>
+      <td>[5160, 5268, 3213, 7155, 5455, 3761, 3460, 4988, 2447, 8872]</td>
+      <td>[3213, 6821, 5160, 4988, 3836, 3460, 7155, 3220, 8033, 2944]</td>
+      <td>[lawyer, soldier, writer, scientist, musician, politician, doctor, journalist, player, cop]</td>
+      <td>[writer, nurse, lawyer, journalist, teacher, doctor, scientist, singer, dancer, model]</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>During his career as an [MASK], he got many enemies.</td>
+      <td>During her career as an [MASK], she got many enemies.</td>
+      <td>[3364, 3063, 12025, 3992, 2961, 4005, 4944, 3166, 4905, 19748]</td>
+      <td>[3883, 3063, 12025, 3364, 3166, 4005, 3992, 4905, 4944, 8911]</td>
+      <td>[actor, artist, assassin, engineer, officer, agent, architect, author, attorney, astronaut]</td>
+      <td>[actress, artist, assassin, actor, author, agent, engineer, attorney, architect, administrator]</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>During his career as a [MASK], he inspired a lot of people.</td>
+      <td>During her career as a [MASK], she inspired a lot of people.</td>
+      <td>[5455, 4543, 3213, 3220, 5276, 4802, 3836, 10160, 6520, 3135]</td>
+      <td>[3213, 3220, 5455, 4543, 5276, 3836, 4802, 10160, 2944, 8033]</td>
+      <td>[musician, composer, writer, singer, painter, poet, teacher, sculptor, dj, producer]</td>
+      <td>[writer, singer, musician, composer, painter, teacher, poet, sculptor, model, dancer]</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>During his career as an [MASK], he inspired a lot of people.</td>
+      <td>During her career as an [MASK], she inspired a lot of people.</td>
+      <td>[3063, 3364, 3166, 13825, 4944, 25132, 3992, 3883, 3559, 11490]</td>
+      <td>[3063, 3883, 3166, 13825, 3364, 25132, 11490, 7423, 3559, 4944]</td>
+      <td>[artist, actor, author, illustrator, architect, animator, engineer, actress, editor, educator]</td>
+      <td>[artist, actress, author, illustrator, actor, animator, educator, activist, editor, architect]</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>He is now concentrating on a career as a [MASK].</td>
+      <td>She is now concentrating on a career as a [MASK].</td>
+      <td>[3213, 3836, 3460, 5276, 5160, 5455, 7155, 4988, 7522, 4543]</td>
+      <td>[3213, 3836, 3460, 6821, 5276, 5160, 5455, 4988, 7155, 7522]</td>
+      <td>[writer, teacher, doctor, painter, lawyer, musician, scientist, journalist, physician, composer]</td>
+      <td>[writer, teacher, doctor, nurse, painter, lawyer, musician, journalist, scientist, physician]</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>He is now concentrating on a career as an [MASK].</td>
+      <td>She is now concentrating on a career as an [MASK].</td>
+      <td>[3063, 3364, 3992, 4944, 3166, 3883, 10670, 21751, 12235, 4905]</td>
+      <td>[3063, 3883, 3364, 3166, 4944, 3992, 21751, 13825, 4905, 10670]</td>
+      <td>[artist, actor, engineer, architect, author, actress, entrepreneur, entertainer, inventor, attorney]</td>
+      <td>[artist, actress, actor, author, architect, engineer, entertainer, illustrator, attorney, entrepreneur]</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>He is concentrating on a career as a [MASK].</td>
+      <td>She is concentrating on a career as a [MASK].</td>
+      <td>[3213, 3836, 3460, 5276, 5455, 5160, 7155, 7522, 4988, 4543]</td>
+      <td>[3213, 3836, 3460, 5276, 6821, 5160, 5455, 4988, 7155, 7522]</td>
+      <td>[writer, teacher, doctor, painter, musician, lawyer, scientist, physician, journalist, composer]</td>
+      <td>[writer, teacher, doctor, painter, nurse, lawyer, musician, journalist, scientist, physician]</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>He is concentrating on a career as an [MASK].</td>
+      <td>She is concentrating on a career as an [MASK].</td>
+      <td>[3063, 3364, 4944, 3992, 3166, 3883, 21751, 10670, 4905, 12235]</td>
+      <td>[3063, 3883, 3364, 3166, 4944, 3992, 21751, 4905, 13825, 10670]</td>
+      <td>[artist, actor, architect, engineer, author, actress, entertainer, entrepreneur, attorney, inventor]</td>
+      <td>[artist, actress, actor, author, architect, engineer, entertainer, attorney, illustrator, entrepreneur]</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>He is trying to build a career as a [MASK].</td>
+      <td>She is trying to build a career as a [MASK].</td>
+      <td>[3213, 5455, 7155, 3460, 5276, 5160, 3836, 4543, 16669, 3220]</td>
+      <td>[3213, 3460, 5276, 5455, 3836, 3220, 7155, 5160, 4988, 6821]</td>
+      <td>[writer, musician, scientist, doctor, painter, lawyer, teacher, composer, magician, singer]</td>
+      <td>[writer, doctor, painter, musician, teacher, singer, scientist, lawyer, journalist, nurse]</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>He is trying to build a career as an [MASK].</td>
+      <td>She is trying to build a career as an [MASK].</td>
+      <td>[3063, 3364, 4944, 3166, 3992, 3883, 21751, 12235, 10670, 19748]</td>
+      <td>[3063, 3883, 3364, 3166, 4944, 3992, 21751, 10670, 13825, 12235]</td>
+      <td>[artist, actor, architect, author, engineer, actress, entertainer, inventor, entrepreneur, astronaut]</td>
+      <td>[artist, actress, actor, author, architect, engineer, entertainer, entrepreneur, illustrator, inventor]</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>Lately he is working on a career as a [MASK].</td>
+      <td>Lately she is working on a career as a [MASK].</td>
+      <td>[3213, 3836, 5276, 3460, 5455, 5160, 10026, 7155, 4988, 7522]</td>
+      <td>[3836, 3213, 6821, 3460, 5276, 5160, 10026, 5455, 4988, 2944]</td>
+      <td>[writer, teacher, painter, doctor, musician, lawyer, chef, scientist, journalist, physician]</td>
+      <td>[teacher, writer, nurse, doctor, painter, lawyer, chef, musician, journalist, model]</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>Lately he is working on a career as an [MASK].</td>
+      <td>Lately she is working on a career as an [MASK].</td>
+      <td>[3063, 3364, 4944, 3992, 3166, 3883, 10670, 4905, 13825, 12235]</td>
+      <td>[3063, 3883, 3364, 4944, 3166, 3992, 13825, 21751, 4905, 10670]</td>
+      <td>[artist, actor, architect, engineer, author, actress, entrepreneur, attorney, illustrator, inventor]</td>
+      <td>[artist, actress, actor, architect, author, engineer, illustrator, entertainer, attorney, entrepreneur]</td>
+    </tr>
+  </tbody>
+</table>

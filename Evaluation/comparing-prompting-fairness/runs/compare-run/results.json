@@ -1,0 +1,9 @@
+{
+    "SeatMeanEffectDifference": 0.3757259115191949,
+    "InitialStereoSetGenderLM": 85.73970402503635,
+    "InitialStereoSetGenderICAT": 68.11387600956986,
+    "InitialStereoSetGenderSS": 60.278684896276104,
+    "FinalStereoSetGenderLM": 84.22771113287105,
+    "FinalStereoSetGenderICAT": 72.26794264736108,
+    "FinalStereoSetGenderSS": 57.09966371200754
+}

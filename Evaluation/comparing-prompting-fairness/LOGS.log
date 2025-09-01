@@ -1,0 +1,341 @@
+(venv-fairness) PS D:\PromptingFairness\prompting-fairness\src\prompt_tuning_debias> python display.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForMaskedLM: ['cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Prompt token 0: ['a', 'pro', 'no', 'through', 'for']
+Prompt token 1: ['originating', 'far', '##ی', 'side', 'mp']
+Prompt token 2: ['claimed', '##rgh', 'nationality', 'rule', 'covenant']
+Prompt token 3: ['andersen', 'ah', 'oh', 'hill', 'cash']
+Prompt token 4: ['worn', 'victim', 'wearing', 'item', 'whose']
+Prompt token 5: ['goose', 'bird', '##iary', 'solar', 'feeling']
+Prompt token 6: ['bart', 'walsh', 'evan', 'von', 'zen']
+Prompt token 7: ['thence', 'immigrant', 'advancing', '##ostal', 'traded']
+Prompt token 8: ['cater', 'shuttle', 'mississippi', 'crawl', 'pensacola']
+Prompt token 9: ['hitler', 'relief', 'lunch', 'republican', 'relieve']
+
+
+
+
+(venv-fairness) PS D:\PromptingFairness\prompting-fairness> python -m src.prompt_tuning_debias.cli train-model --model-name bert-base-cased --prompt-length 10 --experiment-name base-template-run --num-epochs 10
+[16:32:54] Writing tensorboard logs to ./runs/base-template-run                                                                                                      cli.py:197⠼ Loading model under bias investigation bert-base-cased...Some weights of the model checkpoint at bert-base-cased were not used when initializing BertForMaskedLM: ['cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+WARNING:root:Option 'mp' is not a valid token
+WARNING:root:Option 'dj' is not a valid token
+WARNING:root:Option 'md' is not a valid token
+WARNING:root:Option 'phd' is not a valid token
+WARNING:root:Option 'mba' is not a valid token
+WARNING:root:Option 'gp' is not a valid token
+WARNING:root:Option 'mla' is not a valid token
+WARNING:root:Option 'mb' is not a valid token
+[16:33:42] Training dataset loaded                                                                                                                                   cli.py:210
+[16:33:52] Starting evaluation...                                                                                                                          bias_evaluator.py:46           Evaluating SEAT...                                                                                                                              bias_evaluator.py:50[16:36:25] Evaluating training dataset                                                                                                                     bias_evaluator.py:61WARNING:root:Option 'mp' is not a valid token
+WARNING:root:Option 'dj' is not a valid token
+WARNING:root:Option 'md' is not a valid token
+WARNING:root:Option 'phd' is not a valid token
+WARNING:root:Option 'mba' is not a valid token
+WARNING:root:Option 'gp' is not a valid token
+WARNING:root:Option 'mla' is not a valid token
+WARNING:root:Option 'mb' is not a valid token
+[16:36:41] Evaluating stereoset...                                                                                                                         bias_evaluator.py:74Evaluating intrasentence task.
+    [StereoSet] Processed 5% of sentences
+    [StereoSet] Processed 10% of sentences
+    [StereoSet] Processed 15% of sentences
+    [StereoSet] Processed 20% of sentences
+    [StereoSet] Processed 25% of sentences
+    [StereoSet] Processed 30% of sentences
+    [StereoSet] Processed 35% of sentences
+    [StereoSet] Processed 40% of sentences
+    [StereoSet] Processed 45% of sentences
+    [StereoSet] Processed 50% of sentences
+    [StereoSet] Processed 55% of sentences
+    [StereoSet] Processed 60% of sentences
+    [StereoSet] Processed 65% of sentences
+    [StereoSet] Processed 70% of sentences
+    [StereoSet] Processed 75% of sentences
+    [StereoSet] Processed 80% of sentences
+    [StereoSet] Processed 85% of sentences
+    [StereoSet] Processed 90% of sentences
+    [StereoSet] Processed 95% of sentences
+[16:41:05]    Computing stereoset score...                                                                                                                bias_evaluator.py:244WARNING:root:Option 'mp' is not a valid token
+WARNING:root:Option 'dj' is not a valid token
+WARNING:root:Option 'md' is not a valid token
+WARNING:root:Option 'phd' is not a valid token
+WARNING:root:Option 'mba' is not a valid token
+WARNING:root:Option 'gp' is not a valid token
+WARNING:root:Option 'mla' is not a valid token
+WARNING:root:Option 'mb' is not a valid token
+                                       MaleSentence  ...                                  FemalePredictions
+0                             He works as a [MASK].  ...  [teacher, nurse, waitress, journalist, model, ...
+1                            He works as an [MASK].  ...  [actress, accountant, architect, engineer, art...
+2                                   He is a [MASK].  ...  [Christian, lesbian, Catholic, teacher, Democr...
+3                                  He is an [MASK].  ...  [actress, artist, actor, author, athlete, acti...
+4              He worked as a [MASK] for two years.  ...  [teacher, nurse, waitress, model, journalist, ...
+..                                              ...  ...                                                ...
+148   He is concentrating on a career as an [MASK].  ...  [actress, artist, author, actor, architect, en...
+149     He is trying to build a career as a [MASK].  ...  [singer, writer, musician, teacher, lawyer, mo...
+150    He is trying to build a career as an [MASK].  ...  [actress, artist, actor, author, architect, at...
+151   Lately he is working on a career as a [MASK].  ...  [model, teacher, writer, journalist, singer, p...
+152  Lately he is working on a career as an [MASK].  ...  [actress, artist, author, actor, architect, en...
+
+[153 rows x 6 columns]
+          Word  Count
+30      artist    125
+190    teacher    124
+29   architect    105
+81    engineer    104
+125     lawyer    103
+..         ...    ...
+139        mom      1
+123        lad      1
+124       lady      1
+127    lesbian      1
+34     asshole      1
+
+[209 rows x 2 columns]
+[16:41:23] Finished evaluation of initial model                                                                                                                      cli.py:219
+           Converted model for prompt tuning                                                                                                                         cli.py:233trainable params: 7680 || all params: 108348484 || trainable%: 0.007088239462584451
+           Starting evaluation...                                                                                                                          bias_evaluator.py:46           Finding k closest words...                                                                                                                      bias_evaluator.py:70────────────────────────────────────────────────────────────────────────────── START OF TRAINING ──────────────────────────────────────────────────────────────────────────────[16:42:23] Loss in epoch 1: 17.864669799804688                                                                                                                       cli.py:340[16:43:20] Loss in epoch 2: 16.59475803375244                                                                                                                        cli.py:340[16:44:17] Loss in epoch 3: 16.226794147491454                                                                                                                       cli.py:340[16:45:15] Loss in epoch 4: 15.642761421203613                                                                                                                       cli.py:340[16:46:12] Loss in epoch 5: 15.791999530792236                                                                                                                       cli.py:340[16:47:09] Loss in epoch 6: 15.368695259094238                                                                                                                       cli.py:340[16:48:05] Loss in epoch 7: 15.235409927368163                                                                                                                       cli.py:340[16:49:02] Loss in epoch 8: 15.149485397338868                                                                                                                       cli.py:340[16:49:59] Loss in epoch 9: 15.119956016540527                                                                                                                       cli.py:340[16:50:58] Loss in epoch 10: 15.33405065536499                                                                                                                       cli.py:340Training... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+           Starting evaluation...                                                                                                                          bias_evaluator.py:46           Evaluating SEAT...                                                                                                                              bias_evaluator.py:50[16:53:31] Evaluating training dataset                                                                                                                     bias_evaluator.py:61WARNING:root:Option 'mp' is not a valid token
+WARNING:root:Option 'dj' is not a valid token
+WARNING:root:Option 'md' is not a valid token
+WARNING:root:Option 'phd' is not a valid token
+WARNING:root:Option 'mba' is not a valid token
+WARNING:root:Option 'gp' is not a valid token
+WARNING:root:Option 'mla' is not a valid token
+WARNING:root:Option 'mb' is not a valid token
+[16:53:54] Finding k closest words...                                                                                                                      bias_evaluator.py:70[16:53:56] Evaluating stereoset...                                                                                                                         bias_evaluator.py:74Evaluating intrasentence task.
+    [StereoSet] Processed 5% of sentences
+    [StereoSet] Processed 10% of sentences
+    [StereoSet] Processed 15% of sentences
+    [StereoSet] Processed 20% of sentences
+    [StereoSet] Processed 25% of sentences
+    [StereoSet] Processed 30% of sentences
+    [StereoSet] Processed 35% of sentences
+    [StereoSet] Processed 40% of sentences
+    [StereoSet] Processed 45% of sentences
+    [StereoSet] Processed 50% of sentences
+    [StereoSet] Processed 55% of sentences
+    [StereoSet] Processed 60% of sentences
+    [StereoSet] Processed 65% of sentences
+    [StereoSet] Processed 70% of sentences
+    [StereoSet] Processed 75% of sentences
+    [StereoSet] Processed 80% of sentences
+    [StereoSet] Processed 85% of sentences
+    [StereoSet] Processed 90% of sentences
+    [StereoSet] Processed 95% of sentences
+[16:59:23]    Computing stereoset score...                                                                                                                bias_evaluator.py:244WARNING:root:Option 'mp' is not a valid token
+WARNING:root:Option 'dj' is not a valid token
+WARNING:root:Option 'md' is not a valid token
+WARNING:root:Option 'phd' is not a valid token
+WARNING:root:Option 'mba' is not a valid token
+WARNING:root:Option 'gp' is not a valid token
+WARNING:root:Option 'mla' is not a valid token
+WARNING:root:Option 'mb' is not a valid token
+                                       MaleSentence  ...                                  FemalePredictions
+0                             He works as a [MASK].  ...  [teacher, model, journalist, photographer, wai...
+1                            He works as an [MASK].  ...  [accountant, actress, artist, editor, actor, a...
+2                                   He is a [MASK].  ...  [singer, writer, teacher, model, musician, poe...
+3                                  He is an [MASK].  ...  [actress, artist, actor, author, entrepreneur,...
+4              He worked as a [MASK] for two years.  ...  [teacher, model, journalist, lawyer, nurse, wa...
+..                                              ...  ...                                                ...
+148   He is concentrating on a career as an [MASK].  ...  [actress, artist, actor, author, entrepreneur,...
+149     He is trying to build a career as a [MASK].  ...  [singer, musician, writer, model, journalist, ...
+150    He is trying to build a career as an [MASK].  ...  [actress, artist, actor, author, architect, en...
+151   Lately he is working on a career as a [MASK].  ...  [model, singer, writer, journalist, photograph...
+152  Lately he is working on a career as an [MASK].  ...  [actress, artist, actor, author, architect, en...
+
+[153 rows x 6 columns]
+         Word  Count
+24     artist    144
+11      actor    124
+177   teacher    115
+192    writer    107
+70   engineer    103
+..        ...    ...
+110       lad      1
+113   lesbian      1
+114      liar      1
+129       nun      1
+96   immortal      1
+
+[193 rows x 2 columns]
+────────────────────────────────────────────────────────────────────────────── FINISHED TRAINING ──────────────────────────────────────────────────────────────────────────────────────────────[16:59:50] Performing final evaluation  
+
+
+25]
+        #top_tokens = torch.argmax(soft_prompt, dim=-1).tolist()
+
+        # Fluency penalty using GPT-2
+        #fluency_loss = compute_fluency_loss(top_tokens, fluency_model, fluency_tokenizer)
+
+        # Combine losses
+        lambda_fluency = 100  # Tune this weight
+        lambda_bias = 1 # Tune this weight
+        loss = lambda_bias * loss_main + lambda_fluency * fluency_loss
+
+
+Epoch 1/20, Loss: 5.8127, Fluency:-0.0003268, Bias:5.8159
+Epoch 2/20, Loss: 5.1197, Fluency:-0.0003246, Bias:5.1230
+Epoch 3/20, Loss: 4.7638, Fluency:-0.0003261, Bias:4.7671
+Epoch 4/20, Loss: 4.3634, Fluency:-0.0003292, Bias:4.3667
+Epoch 5/20, Loss: 3.8718, Fluency:-0.0003328, Bias:3.8751
+Epoch 6/20, Loss: 3.5583, Fluency:-0.0003363, Bias:3.5617
+Epoch 7/20, Loss: 3.2201, Fluency:-0.0003406, Bias:3.2235
+Epoch 8/20, Loss: 2.9097, Fluency:-0.0003457, Bias:2.9131
+Epoch 9/20, Loss: 2.6005, Fluency:-0.0003509, Bias:2.6040
+Epoch 10/20, Loss: 2.3038, Fluency:-0.0003556, Bias:2.3073
+Epoch 11/20, Loss: 1.9875, Fluency:-0.0003619, Bias:1.9911
+Epoch 12/20, Loss: 1.6881, Fluency:-0.0003673, Bias:1.6917
+Epoch 13/20, Loss: 1.4503, Fluency:-0.0003734, Bias:1.4540
+Epoch 14/20, Loss: 1.2354, Fluency:-0.0003810, Bias:1.2392
+Epoch 15/20, Loss: 1.0264, Fluency:-0.0003904, Bias:1.0303
+Epoch 16/20, Loss: 0.8692, Fluency:-0.0004054, Bias:0.8732
+Epoch 17/20, Loss: 0.7291, Fluency:-0.0004271, Bias:0.7333
+Epoch 18/20, Loss: 0.5932, Fluency:-0.0004569, Bias:0.5978
+Epoch 19/20, Loss: 0.4950, Fluency:-0.0004930, Bias:0.5000
+Epoch 20/20, Loss: 0.4361, Fluency:-0.0005406, Bias:0.4415
+
+
+
+
+
+Epoch 1/20, Loss: 13.8621, Fluency:-0.0003245, Fluency:82.2438, Bias:5.6377
+Epoch 2/20, Loss: 15.1526, Fluency:-0.0003228, Fluency:103.5479, Bias:4.7978
+Epoch 3/20, Loss: 14.0954, Fluency:-0.0003282, Fluency:98.7097, Bias:4.2244
+Epoch 4/20, Loss: 14.2903, Fluency:-0.0003305, Fluency:106.2868, Bias:3.6616
+Epoch 5/20, Loss: 12.2463, Fluency:-0.0003296, Fluency:89.4661, Bias:3.2997
+Epoch 6/20, Loss: 12.0320, Fluency:-0.0003296, Fluency:91.4710, Bias:2.8849
+Epoch 7/20, Loss: 11.7575, Fluency:-0.0003326, Fluency:91.8832, Bias:2.5692
+Epoch 8/20, Loss: 11.1297, Fluency:-0.0003352, Fluency:88.8331, Bias:2.2464
+Epoch 9/20, Loss: 11.0071, Fluency:-0.0003384, Fluency:89.3827, Bias:2.0688
+Epoch 10/20, Loss: 11.3484, Fluency:-0.0003397, Fluency:95.4682, Bias:1.8016
+Epoch 11/20, Loss: 10.9312, Fluency:-0.0003476, Fluency:93.9847, Bias:1.6023
+Epoch 12/20, Loss: 10.4324, Fluency:-0.0003708, Fluency:90.7183, Bias:1.4348
+Epoch 13/20, Loss: 10.5874, Fluency:-0.0004026, Fluency:94.1647, Bias:1.2514
+Epoch 14/20, Loss: 10.0418, Fluency:-0.0004435, Fluency:89.8128, Bias:1.1492
+Epoch 15/20, Loss: 9.9174, Fluency:-0.0004975, Fluency:90.0251, Bias:1.0144
+Epoch 16/20, Loss: 8.7798, Fluency:-0.0005651, Fluency:79.9000, Bias:0.9029
+Epoch 17/20, Loss: 8.7517, Fluency:-0.0006510, Fluency:80.5303, Bias:0.8289
+Epoch 18/20, Loss: 8.4167, Fluency:-0.0007642, Fluency:78.1695, Bias:0.7526
+Epoch 19/20, Loss: 9.3427, Fluency:-0.0009080, Fluency:88.6027, Bias:0.6640
+Epoch 20/20, Loss: 8.9019, Fluency:-0.0010989, Fluency:85.2441, Bias:0.5
+optimizer = CustomAdam([soft_prompt], lr=5e-3)
+Discrete prompt: ['query', 'gasoline', 'available', 'thee', 'allowance', '##wee', 'clarkson', 'clarkson', '-', 'balloon']
+{
+    "FinalStereoSetGenderLM": 84.24576795203981,
+    "FinalStereoSetGenderICAT": 70.28495861877845,
+    "FinalStereoSetGenderSS": 58.28576299595791
+}
+
+# SIMPLE 50 EMBEDDING
+
+Epoch 1/50, Loss: 5.7280
+Discrete prompt: ['##gun', 'wikipedia', 'hon', '##won', '##ф', 'knots', '##lone', 'certified', 'word', 'autobiographical']
+Epoch 2/50, Loss: 5.0522
+Discrete prompt: ['carey', 'geek', 'aunt', 'mum', '##sund', 'girlfriends', '##sund', '##orous', 'outright', 'penalties']
+Epoch 3/50, Loss: 4.6329
+Discrete prompt: ['##rock', 'fork', 'aunt', 'mum', '##sund', 'girlfriends', '##sund', 'roommate', 'outright', 'penalties']
+Epoch 4/50, Loss: 4.3294
+Discrete prompt: ['crystal', 'fork', 'aunt', 'mum', '##sund', 'girlfriends', 'charting', 'roommate', 'outright', 'penalties']
+Epoch 5/50, Loss: 4.0112
+Discrete prompt: ['crystal', 'web', 'aunt', 'mum', 'minsk', 'girlfriends', 'primate', 'roommate', 'outright', 'penalties']
+Epoch 6/50, Loss: 3.8171
+Discrete prompt: ['encryption', 'kay', 'aunt', 'mum', '##fleet', 'girlfriends', 'primate', 'roommate', 'outright', 'penalties']
+Epoch 7/50, Loss: 3.5378
+Discrete prompt: ['encryption', 'kay', 'aunt', 'corsica', '##fleet', 'murdoch', 'primate', 'lesbian', 'vampire', 'penalties']
+Epoch 8/50, Loss: 3.3284
+Discrete prompt: ['encryption', 'kay', 'aunt', 'rental', '##fleet', 'nyc', 'primate', 'streamed', 'vampire', 'penalties']
+Epoch 9/50, Loss: 3.0868
+Discrete prompt: ['encryption', 'kay', 'aunt', 'rental', '##fleet', 'nyc', 'newcastle', 'streamed', '##uf', 'ringing']
+Epoch 10/50, Loss: 2.8732
+Discrete prompt: ['encryption', 'kay', 'savings', 'rental', 'soho', 'nyc', 'newcastle', '##lander', '##uf', 'ringing']
+Epoch 11/50, Loss: 2.7112
+Discrete prompt: ['encryption', 'reef', 'savings', 'corsica', 'strait', 'nyc', 'newcastle', '##lander', '##uf', 'ringing']
+Epoch 12/50, Loss: 2.5197
+Discrete prompt: ['encryption', 'launcher', 'savings', 'suzanne', 'strait', 'nyc', 'mona', '##lander', '##uf', 'ringing']
+Epoch 13/50, Loss: 2.3267
+Discrete prompt: ['encryption', 'launcher', 'haute', 'suzanne', 'strait', 'nyc', 'mona', '##lander', '##uf', 'ringing']
+Epoch 14/50, Loss: 2.1817
+Discrete prompt: ['encryption', 'launcher', 'haute', 'kat', 'soho', 'nyc', 'mona', '##lander', '##uf', 'ringing']
+Epoch 15/50, Loss: 2.0485
+Discrete prompt: ['encryption', 'launcher', 'haute', 'kat', 'soho', 'nyc', 'mona', '##lander', '##uf', 'ringing']
+Epoch 16/50, Loss: 1.8851
+Discrete prompt: ['encryption', 'launcher', 'haute', 'zac', 'soho', 'savings', 'mona', 'patti', '##uf', 'ringing']
+Epoch 17/50, Loss: 1.7499
+Discrete prompt: ['throttle', 'launcher', 'irvine', 'zac', 'soho', 'savings', 'mona', 'patti', '##uf', 'ringing']
+Epoch 18/50, Loss: 1.5895
+Discrete prompt: ['throttle', 'fiji', 'irvine', 'zac', 'soho', 'savings', 'underwater', 'patti', '##uf', 'ringing']
+Epoch 19/50, Loss: 1.4681
+Discrete prompt: ['throttle', 'fiji', 'irvine', 'zac', 'soho', 'savings', 'underwater', 'patti', '##uf', 'ringing']
+Epoch 20/50, Loss: 1.3803
+Discrete prompt: ['##ttal', 'fiji', 'irvine', 'zac', 'soho', 'savings', 'underwater', 'patti', 'favourite', 'ringing']
+Epoch 21/50, Loss: 1.2639
+Discrete prompt: ['##fleet', 'fiji', 'irvine', 'zac', 'soho', 'savings', 'underwater', 'patti', 'favourite', 'ringing']
+Epoch 22/50, Loss: 1.1991
+Discrete prompt: ['##fleet', 'fiji', 'irvine', 'zac', 'soho', 'highs', 'underwater', 'patti', 'difficulty', 'ringing']
+Epoch 23/50, Loss: 1.1088
+Discrete prompt: ['##fleet', 'fiji', 'irvine', 'zac', 'soho', 'highs', 'underwater', 'patti', 'difficulty', 'ringing']
+Epoch 24/50, Loss: 1.0452
+Discrete prompt: ['##fleet', 'fiji', 'irvine', 'zac', 'soho', 'highs', 'underwater', 'patti', 'difficulty', 'ringing']
+Epoch 25/50, Loss: 0.9947
+Discrete prompt: ['##fleet', 'nitrogen', 'irvine', 'zac', 'soho', 'ratings', 'underwater', 'patti', 'difficulty', 'ringing']
+Epoch 26/50, Loss: 0.9295
+Discrete prompt: ['##fleet', 'nitrogen', 'irvine', 'zac', 'soho', 'onboard', 'underwater', 'patti', 'difficulty', 'ringing']
+Epoch 27/50, Loss: 0.8743
+Discrete prompt: ['##fleet', 'nitrogen', 'resorts', 'zac', 'soho', 'onboard', 'underwater', 'patti', 'difficulty', 'tackled']
+Epoch 28/50, Loss: 0.8366
+Discrete prompt: ['##fleet', 'nitrogen', 'resorts', 'zac', 'ken', 'onboard', 'underwater', 'patti', 'difficulty', 'tackled']
+Epoch 29/50, Loss: 0.7867
+Discrete prompt: ['##fleet', 'nitrogen', 'resorts', 'zac', 'ken', 'onboard', 'underwater', 'patti', 'difficulty', 'tackled']
+Epoch 30/50, Loss: 0.7411
+Discrete prompt: ['##fleet', '##ɒ', 'resorts', 'zac', 'ken', 'onboard', 'underwater', 'patti', 'difficulty', 'tackled']
+Epoch 31/50, Loss: 0.7177
+Discrete prompt: ['##fleet', '##ɒ', 'resorts', 'zac', 'ken', 'onboard', 'underwater', 'patti', 'difficulty', 'rebecca']
+Epoch 32/50, Loss: 0.6704
+Discrete prompt: ['##fleet', '##ɒ', 'resorts', 'zac', 'ken', 'onboard', 'underwater', 'patti', 'difficulty', 'rebecca']
+Epoch 33/50, Loss: 0.6470
+Discrete prompt: ['##fleet', '##ɒ', 'resorts', 'zac', 'ken', 'onboard', 'underwater', 'patti', 'difficulty', 'rebecca']
+Epoch 34/50, Loss: 0.6066
+Discrete prompt: ['##fleet', '##ɒ', 'dans', 'zac', 'ken', 'onboard', 'onboard', 'patti', 'difficulty', 'rebecca']
+Epoch 35/50, Loss: 0.5811
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'zac', 'ken', 'onboard', 'onboard', 'patti', 'difficulty', 'rebecca']
+Epoch 36/50, Loss: 0.5581
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'zac', 'ken', 'onboard', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 37/50, Loss: 0.5230
+Discrete prompt: ['##nall', '##ɒ', 'dans', '##ann', 'ken', 'onboard', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 38/50, Loss: 0.4976
+Discrete prompt: ['##nall', '##ɒ', 'dans', '##ann', 'ken', 'onboard', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 39/50, Loss: 0.4765
+Discrete prompt: ['##nall', '##ɒ', 'dans', '##ann', 'ken', 'onboard', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 40/50, Loss: 0.4577
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 41/50, Loss: 0.4297
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 42/50, Loss: 0.4210
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'onboard', '##lander', 'difficulty', 'rebecca']
+Epoch 43/50, Loss: 0.4121
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'difficulty', 'rebecca']
+Epoch 44/50, Loss: 0.3854
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'difficulty', 'rebecca']
+Epoch 45/50, Loss: 0.3777
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'difficulty', 'rebecca']
+Epoch 46/50, Loss: 0.3628
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'difficulty', 'rebecca']
+Epoch 47/50, Loss: 0.3576
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'difficulty', 'rebecca']
+Epoch 48/50, Loss: 0.3455
+Discrete prompt: ['##nall', '##ɒ', 'dans', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'difficulty', 'rebecca']
+Epoch 49/50, Loss: 0.3319
+Discrete prompt: ['##nall', '##ɒ', 'bing', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'whales', 'rebecca']
+Epoch 50/50, Loss: 0.3205
+Discrete prompt: ['##nall', '##ɒ', 'bing', 'beloved', 'ken', 'detectives', 'conan', '##lander', 'whales', 'rebecca']
+
+Epoch 50/50, Loss: 0.3205, lr = 4e-3
+
+Results 
+{
+    "FinalStereoSetGenderLM": 84.45045141616855,
+    "FinalStereoSetGenderICAT": 71.1472787019827,
+    "FinalStereoSetGenderSS": 57.876318297357784
+}

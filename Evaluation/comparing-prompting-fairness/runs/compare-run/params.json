@@ -1,0 +1,12 @@
+{
+    "model_name": "bert-base-uncased",
+    "prompt_length": 10,
+    "num_epochs": 10,
+    "loss_type": "equal_logits_options",
+    "position_ids_adjustment": "none",
+    "use_names_in_training_data": false,
+    "prompt_init_string": "None",
+    "learning_rate": 0.01,
+    "valid_set_ratio": 0.05,
+    "batch_size": 16
+}
