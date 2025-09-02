@@ -5,7 +5,7 @@ Structure:
 DebiasTRaIN/
 ├── Training/
 │   ├── DebiasTRaIN_prompt_optimization.ipynb   # main notebook for construction of prompts using our method
-│   ├── bias_template.py   # constructs templates required for training
+│   ├── bias_template.py                        # constructs templates required for training
 │   ├── occupations_gender_specific.json        # data file for bias_template.py
 │   ├── occupations_large.json                  # data file for bias_template.py
 │   └── Readme.txt                              # Further Details on how to use this folder
